@@ -1,4 +1,4 @@
-import featuredHouse from './enhanced/featured-house.webp';
+import featuredHouse from './enhanced/featured-pool-house.webp';
 import featuredFloor from './enhanced/featured-floor.webp';
 import featuredCourt from './enhanced/featured-court.webp';
 // Vite imports: missing files fail the build instead of becoming broken production URLs.

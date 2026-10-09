@@ -254,12 +254,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 1: Rumah Kediaman */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox([IMAGES.originalHouse], 0, 'Rumah Kediaman Setingkat')}
+              onClick={() => onOpenLightbox([IMAGES.projectVillaPool], 0, 'Rumah Kediaman dengan Kolam Renang — Foto Asal')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
                   src={IMAGES.featuredHouse}
-                  alt="Rumah Kediaman Setingkat"
+                  alt="Visual rumah kediaman dengan kolam renang"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
