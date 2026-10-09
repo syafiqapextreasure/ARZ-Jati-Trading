@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images';
+
 export interface ServiceItem {
   id: string;
   slug: string;
@@ -19,7 +21,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Dari Asas Kepada Kediaman Idaman',
     shortDescription: 'Pembinaan rumah banglo dan kediaman mengikut pelan, struktur kukuh bermutu tinggi, dan penyeliaan rapi.',
     fullDescription: 'Kami mengendalikan projek pembinaan kediaman dari fasa kerja tanah, asas konkrit bertetulang, struktur tiang dan rasuk bumi, pemasangan dinding bata, bumbung berkualiti sehinggalah kerja kemasan akhir dan penyerahan kunci.',
-    heroImage: '/src/assets/images/service_home_construction_1791513684692.jpg',
+    heroImage: IMAGES.serviceBinaRumah,
     features: [
       'Penyediaan tapak & pembinaan asas tapak bina konkrit',
       'Struktur kerangka konkrit bertetulang mengikut spesifikasi',
@@ -41,7 +43,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Ruang Baharu, Kehidupan Lebih Selesa',
     shortDescription: 'Memperluas ruang dapur, bilik tambahan, anjung kereta, baik pulih bumbung bocor, dan peremajaan rumah lama.',
     fullDescription: 'Tingkatkan keselesaan dan nilai hartanah anda dengan perkhidmatan ubah suai menyeluruh. Kami meneliti integriti struktur sedia ada sebelum memulakan kerja penambahan ruang atau pembaikan kerosakan.',
-    heroImage: '/src/assets/images/service_interior_renovation_1791513694687.jpg',
+    heroImage: IMAGES.serviceUbahSuai,
     features: [
       'Penyambungan ruang dapur basah & dapur kering',
       'Penambahan bilik tidur, anjung kereta (porch) & balkoni',
@@ -62,7 +64,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Sentuhan Akhir Yang Menyerlah & Tahan Cuaca',
     shortDescription: 'Pakar cat beriktiraf KCC & Sissons: cat kediaman, spray bumbung komersial, cat lantai epoxy & gelanggang sukan.',
     fullDescription: 'Sebagai Aplikator Berdaftar KCC Paints dan Sissons Paints (True Colour Painting Solutions), kami melaksanakan aplikasi cat mengikut sistem teknikal rasmi pengilang dengan persediaan permukaan yang rapi.',
-    heroImage: '/src/assets/images/service_professional_painting_1791513706760.jpg',
+    heroImage: IMAGES.serviceCatKemasan,
     features: [
       'Pengecatan luaran (exterior) tahan cuaca tropika & anti-lumut',
       'Pengecatan dalaman (interior) halus dan mudah dicuci',
@@ -84,7 +86,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Kekemasan Lantai & Ruang Sanitari Moden',
     shortDescription: 'Pemasangan jubin porselin ruang tamu, mozek bilik mandi, dan jubin tahan lasak di anjung kereta.',
     fullDescription: 'Kekemasan lantai bergantung kepada kerataan aras simen dan ketepatan potongan jubin. Pasukan mozek kami yang berpengalaman memastikan jarak nat (grout) sekata dan kemas.',
-    heroImage: '/src/assets/images/project_tiling_flooring_porcelain_1791513796096.jpg',
+    heroImage: IMAGES.projectTilingFlooring,
     features: [
       'Pemasangan jubin format besar (2x2 kaki & ke atas) licin berkilat',
       'Kemasan jubin dinding bilik mandi bercorak moden kalis lembapan',
@@ -105,7 +107,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Visualisasi Ruang & Kemasan Dalaman Khusus',
     shortDescription: 'Perancangan konsep 3D reka bentuk kediaman serta pembuatan kabinet hiasan dan kabinet dapur.',
     fullDescription: 'Kami membantu menterjemahkan idea pemilik kepada visualisasi reka bentuk yang jelas sebelum pembinaan dimulakan, di samping menyediakan produk pertukangan dalaman seperti kabinet dapur dan panel TV moden.',
-    heroImage: '/src/assets/images/project_villa_pool_deck_1791513784786.jpg',
+    heroImage: IMAGES.projectVillaPool,
     features: [
       'Ilustrasi visualisasi konsep reka bentuk 3D kediaman',
       'Reka letak ruang dalaman ergonomik dan praktikal',
@@ -126,7 +128,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Asas Tapak Stabil & Keindahan Halaman',
     shortDescription: 'Pembekalan tanah merah, perataan jentera berat, saliran tapak serta penanaman rumput karpet.',
     fullDescription: 'Sebelum pembinaan atau pembinaan pagar, tapak tanah perlu dimampatkan dan diratakan dengan betul untuk mengelakkan mendapan. Kami juga menyediakan khidmat hiasan halaman dan penanaman rumput.',
-    heroImage: '/src/assets/images/equipment_rental_machinery_1791513807187.jpg',
+    heroImage: IMAGES.equipmentRental,
     features: [
       'Pembekalan tanah tambak lori tipper',
       'Perataan tapak menggunakan jentera tolak / backhoe',
@@ -148,7 +150,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Penyelenggaraan Sistem Penyaman Udara & Tapak',
     shortDescription: 'Pemasangan unit penyaman udara, servis cucian kimia cooling coil, dan penyelenggaraan peralatan teknikal.',
     fullDescription: 'Pasukan teknikal kami bersedia menyokong keperluan pengudaraan dan kemudahan tapak dengan servis berkala bagi unit penyaman udara kediaman dan pejabat.',
-    heroImage: '/src/assets/images/hero_bungalow_pearl_glass_1791513673006.jpg',
+    heroImage: IMAGES.heroBungalow,
     features: [
       'Pemasangan unit penyaman udara (indoor & outdoor compressor)',
       'Servis kimia (chemical overhaul) menyeluruh cooling coil & blower',

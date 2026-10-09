@@ -19,6 +19,7 @@ import { COMPANY_INFO } from '../data/company';
 import { PROJECTS } from '../data/projects';
 import { SERVICES } from '../data/services';
 import { buildGeneralWhatsAppUrl } from '../data/rental';
+import { IMAGES } from '../assets/images';
 
 interface HomePageProps {
   onNavigate: (path: string) => void;
@@ -88,7 +89,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
         {/* Full Natural Colour Background Image with Subtle Scrim */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/src/assets/images/hero_bungalow_pearl_glass_1791513673006.jpg"
+            src={IMAGES.heroBungalow}
             alt="Ilustrasi kediaman banglo moden ARZ Jati Trading"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center select-none"
@@ -211,7 +212,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
-                  src="/src/assets/images/service_home_construction_1791513684692.jpg"
+                  src={IMAGES.serviceBinaRumah}
                   alt="Perkhidmatan Bina Rumah ARZ Jati Trading"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
@@ -241,7 +242,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
-                  src="/src/assets/images/service_interior_renovation_1791513694687.jpg"
+                  src={IMAGES.serviceUbahSuai}
                   alt="Perkhidmatan Ubah Suai Rumah ARZ Jati Trading"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
@@ -271,7 +272,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
-                  src="/src/assets/images/service_professional_painting_1791513706760.jpg"
+                  src={IMAGES.serviceCatKemasan}
                   alt="Perkhidmatan Cat dan Kemasan Khas ARZ Jati Trading"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
@@ -349,11 +350,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 1: Rumah Kediaman */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox(['/src/assets/images/service_home_construction_1791513684692.jpg'], 0, 'Rumah Kediaman Setingkat')}
+              onClick={() => onOpenLightbox([IMAGES.serviceBinaRumah], 0, 'Rumah Kediaman Setingkat')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src="/src/assets/images/service_home_construction_1791513684692.jpg"
+                  src={IMAGES.serviceBinaRumah}
                   alt="Rumah Kediaman Setingkat"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -372,11 +373,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 2: Kemasan Lantai */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox(['/src/assets/images/project_tiling_flooring_porcelain_1791513796096.jpg'], 0, 'Kemasan Lantai Jubin Porselin')}
+              onClick={() => onOpenLightbox([IMAGES.projectTilingFlooring], 0, 'Kemasan Lantai Jubin Porselin')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src="/src/assets/images/project_tiling_flooring_porcelain_1791513796096.jpg"
+                  src={IMAGES.projectTilingFlooring}
                   alt="Kemasan Lantai Jubin Porselin"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -395,11 +396,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 3: Gelanggang Sukan */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox(['/src/assets/images/project_sports_court_malaysia_1791513721078.jpg'], 0, 'Gelanggang Sukan Sekolah Integrasi Tanah Merah')}
+              onClick={() => onOpenLightbox([IMAGES.projectSportsCourt], 0, 'Gelanggang Sukan Sekolah Integrasi Tanah Merah')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src="/src/assets/images/project_sports_court_malaysia_1791513721078.jpg"
+                  src={IMAGES.projectSportsCourt}
                   alt="Gelanggang Sukan Sekolah Integrasi Tanah Merah"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -439,7 +440,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Machinery Background with Dimming Scrim */}
             <div className="absolute inset-0 z-0">
               <img
-                src="/src/assets/images/equipment_rental_machinery_1791513807187.jpg"
+                src={IMAGES.equipmentRental}
                 alt="Peralatan pembinaan dan jentera sokongan tapak"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center select-none"
