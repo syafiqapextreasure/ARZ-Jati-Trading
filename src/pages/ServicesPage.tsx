@@ -19,7 +19,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
   const activeService = SERVICES.find((s) => s.id === selectedServiceId) || SERVICES[0];
 
   return (
-    <div className="w-full text-neutral-100 py-12 sm:py-20">
+    <div className="light-section services-page w-full py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
         
         {/* Header Hero */}
@@ -32,10 +32,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             Kepakaran Menyeluruh Dari Asas Hingga Kemasan Akhir
           </h1>
           <p className="text-xl sm:text-[22px] text-neutral-300 leading-relaxed max-w-3xl">
-            Tujuh bahagian perkhidmatan pakar disokong oleh 43 pekerja operasi terlatih dan sistem bahan bertauliah.
+            Perkhidmatan pembinaan, pengubahsuaian dan kemasan berasaskan bidang operasi dalam profil syarikat.
           </p>
         </section>
 
+        <p className="text-base text-neutral-400">Ilustrasi perkhidmatan dijana AI berasaskan rujukan projek ARZ. Foto projek asal boleh dilihat dalam portfolio.</p>
         {/* Equipment Rental Promo Bar within Services */}
         <div className="p-6 sm:p-8 rounded-2xl pearl-glass border border-white/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
@@ -45,7 +46,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             <div>
               <h3 className="text-xl font-bold text-white">Perlukan Sewaan Peralatan Tapak?</h3>
               <p className="text-sm text-neutral-300">
-                Peralatan sokongan tapak sedia untuk pertanyaan ketersediaan harian dan mingguan.
+                Hubungi kami untuk maklumat peralatan, tempoh sewaan dan ketersediaan.
               </p>
             </div>
           </div>
@@ -152,7 +153,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               Senarai Lengkap 7 Bidang Perkhidmatan
             </h2>
             <p className="text-neutral-300 text-lg sm:text-[20px]">
-              Setiap bahagian diketuai oleh penyelia tapak bertauliah bagi memastikan hasil mengikut jadual.
+              Bincangkan skop, jadual dan spesifikasi kerja dengan pasukan kami sebelum memulakan projek.
             </p>
           </div>
 

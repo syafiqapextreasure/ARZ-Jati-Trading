@@ -1,18 +1,16 @@
-/**
- * Centralized Image Assets
- * All images reside in /public/images/ so they are served directly at /images/...
- * both in local Vite development and when built for Cloudflare Pages/Workers/Vercel.
- */
-
-export const IMAGES = {
-  heroBungalow: '/images/hero-bungalow.jpg',
-  serviceBinaRumah: '/images/service-bina-rumah.jpg',
-  serviceUbahSuai: '/images/service-ubah-suai.jpg',
-  serviceCatKemasan: '/images/service-cat.jpg',
-  projectSportsCourt: '/images/project-gelanggang.jpg',
-  projectPerodua: '/images/project-perodua.jpg',
-  projectWismaAudit: '/images/project-wisma-audit.jpg',
-  projectVillaPool: '/images/project-villa.jpg',
-  projectTilingFlooring: '/images/project-lantai.jpg',
-  equipmentRental: '/images/equipment-rental.jpg',
-} as const;
+// Vite imports: missing files fail the build instead of becoming broken production URLs.
+import heroBungalow from './enhanced/hero-design.webp';
+import serviceBinaRumah from './enhanced/construction.webp';
+import serviceUbahSuai from './enhanced/renovation.webp';
+import serviceCatKemasan from './enhanced/painting.webp';
+import projectTilingFlooring from './enhanced/flooring.webp';
+import equipmentRental from './enhanced/earthworks.webp';
+import serviceMaintenance from './enhanced/servicing.webp';
+import serviceDesign from './enhanced/hero-design.webp';
+import originalHouse from './portfolio/page-14-image-01.jpg';
+import originalFloor from './portfolio/page-16-image-04.jpg';
+import projectSportsCourt from './portfolio/page-27-image-02.png';
+import projectPerodua from './portfolio/page-22-image-02.png';
+import projectWismaAudit from './portfolio/page-20-image-02.png';
+import projectVillaPool from './portfolio/page-13-image-01.jpg';
+export const IMAGES = { heroBungalow, serviceBinaRumah, serviceUbahSuai, serviceCatKemasan, projectTilingFlooring, equipmentRental, serviceMaintenance, serviceDesign, originalHouse, originalFloor, projectSportsCourt, projectPerodua, projectWismaAudit, projectVillaPool } as const;

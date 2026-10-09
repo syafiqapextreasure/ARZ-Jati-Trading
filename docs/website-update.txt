@@ -1,0 +1,9 @@
+Website update — 9 October 2026
+
+Photography: seven AI-generated marketing illustrations based on company-profile imagery, with new camera perspectives and matching black ARZ-branded workwear. These are staged illustrations, not documentary photographs or proof of actual employee uniforms. Original profile photos remain in project galleries. Original ARZ logo retained. Full-colour photography, black-and-white interface.
+
+Source audit: PDF narrative uses 2018 while registry states commencement in 2008. No founding-year counter is published. Department headcounts are explicitly historical profile figures. Registration details are from the dated document, not a live SSM check. KCC/Sissons recognition and warranties remain subject to source letters and project/manufacturer terms. Rental inventory, rates and current availability require enquiry. Project budgets, dates, completion statistics and unverified locations were removed. Do not publish identity-document scans.
+
+Images: imported through Vite so production builds emit valid hashed asset URLs. Cloudflare serves dist with SPA fallback via wrangler.jsonc. Deploy with the standard build command npm run build, or npm run build -- --configLoader native where the Windows config bundler is restricted.
+
+Validation: TypeScript and production build passed; desktop/mobile navigation and image loading inspected locally. No production deployment or WhatsApp message was sent.

@@ -35,7 +35,7 @@ export const COMPANY_INFO = {
   businessType: 'Pemilikan Tunggal (Sole Proprietorship)',
   ssmStartDate: '20-07-2008',
   ssmExpiryDate: '27-10-2026',
-  ssmStatus: 'AKTIF',
+  ssmStatus: 'Seperti rekod profil bertarikh 31-01-2023',
   ssmUpdateDate: '31-01-2023',
   address: {
     line1: 'PT2907 Tingkat Atas',
@@ -49,7 +49,7 @@ export const COMPANY_INFO = {
   phoneClean: '+60148196216',
   whatsappUrl: 'https://wa.me/60148196216',
   tagline: 'Bina Impian. Cipta Keyakinan.',
-  heroSubheadline: 'Pembinaan, pengubahsuaian dan pembaikian untuk ruang yang lebih baik.',
+  heroSubheadline: 'Pembinaan, pengubahsuaian dan pembaikan untuk ruang yang lebih baik.',
   
   // Geographical outreach
   headquarters: 'Wakaf Bharu, Kelantan',
@@ -62,7 +62,7 @@ export const COMPANY_INFO = {
   // Background narrative from Company Profile (Page 8)
   narrative: {
     origin: 'ARZ JATI TRADING beroperasi berasaskan komitmen teguh untuk merealisasikan kediaman idaman dan kemudahan berkualiti bagi komuniti setempat di Kelantan dan negeri-negeri sekitar.',
-    expansion: 'Bermula dengan projek-projek pembinaan dan pengubahsuaian kediaman di Kelantan, ARZ JATI TRADING telah meluaskan keupayaan operasi ke Terengganu, Perak, Kedah, Pulau Pinang, dan Kuala Lumpur.',
+    expansion: 'Profil syarikat merekodkan langkah pengembangan pada Disember 2022 ke Terengganu, Perak, Kedah, Pulau Pinang dan Kuala Lumpur. Hubungi kami untuk menyemak liputan perkhidmatan semasa.',
     commitment: 'Kami komited memberikan perkhidmatan yang cekap, kemas, dan dipercayai dengan penyeliaan tapak yang teliti demi kepuasan pelanggan serta pembangunan komuniti.',
   },
 
@@ -70,20 +70,20 @@ export const COMPANY_INFO = {
   objectives: [
     {
       id: 'obj-1',
-      title: 'Kualiti Kemasan Piawaian Industri',
-      description: 'Menyediakan hasil pertukangan dan pengecatan berprestasi tinggi yang tahan cuaca mengikut sistem bahan bertauliah.',
+      title: 'Kualiti Kerja',
+      description: 'Menghasilkan kerja berkualiti yang memenuhi keperluan pelanggan.',
       proposedPendingOwnerReview: true,
     },
     {
       id: 'obj-2',
-      title: 'Ketepatan Jadual & Pengurusan Tapak',
-      description: 'Memastikan garis masa pembinaan dipantau secara berdisiplin bersama komunikasi berkala kepada pemilik projek.',
+      title: 'Komunikasi & Kecekapan',
+      description: 'Mengutamakan komunikasi yang jelas dan pelaksanaan kerja yang cekap.',
       proposedPendingOwnerReview: true,
     },
     {
       id: 'obj-3',
-      title: 'Integriti & Ketelusan Kos',
-      description: 'Menyediakan sebut harga yang jelas, spesifikasi bahan terperinci, dan bimbingan teknikal jujur tanpa kos tersembunyi.',
+      title: 'Pasukan & Komuniti',
+      description: 'Membangunkan kemahiran pasukan serta menyokong komuniti dan alam sekitar.',
       proposedPendingOwnerReview: true,
     },
   ] as CompanyObjective[],
@@ -158,7 +158,7 @@ export const COMPANY_INFO = {
       statusTitle: 'KCC Approved Applicator',
       dated: '10 Mac 2026',
       referenceNo: 'CO/L05693/KK/26',
-      scope: 'Aplikasi produk cat jenama KCC dengan sokongan teknikal dan waranti produk.',
+      scope: 'Surat pengiktirafan aplikator KCC bertarikh 10 Mac 2026. Sokongan dan jaminan tertakluk kepada syarat pengilang serta projek.',
       notes: 'Diperakui sebagai kontraktor berwibawa, penyeliaan teliti dan memenuhi kepuasan pengilang.',
     },
     {
@@ -167,7 +167,7 @@ export const COMPANY_INFO = {
       statusTitle: 'Aplikator Yang Diiktiraf',
       dated: '2 November 2023',
       scope: 'Pelaksanaan sistem pengecatan disyorkan jenama Sissons Paints.',
-      notes: 'Tertakluk kepada pemeriksaan tapak Pasukan Teknikal Cat dan surat jaminan bahan sah.',
+      notes: 'Surat jaminan bahan hanya dikeluarkan selepas kerja siap, tertakluk kepada sistem cat disyorkan, bukti pembelian sah dan pemeriksaan tapak pengilang.',
     },
   ] as BrandCredential[],
 };

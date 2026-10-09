@@ -128,15 +128,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenChecklist }) =
             </div>
 
             <div className="pt-2">
-              <button
-                type="button"
-                onClick={onOpenChecklist}
-                className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-white/25 transition-all cursor-pointer"
-                title="Semakan data tapak bina & dokumen SSM"
-              >
-                <CheckSquare className="w-4 h-4 text-neutral-300" />
-                <span>Semakan Pelancaran Pemilik (Launch Checklist)</span>
-              </button>
+              
             </div>
           </div>
 

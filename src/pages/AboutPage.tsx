@@ -35,7 +35,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             <span className="text-neutral-300">Menjana Keyakinan Pelanggan.</span>
           </h1>
           <p className="text-xl sm:text-[22px] text-neutral-300 leading-relaxed max-w-3xl">
-            ARZ JATI TRADING (KT0244929-D) ialah sebuah entiti perniagaan pembinaan dan kerja sivil bumiputera yang beroperasi di Kelantan, komited memberikan mutu kerja kemas, cekap dan berintegriti tinggi.
+            ARZ JATI TRADING (KT0244929-D) ialah sebuah perniagaan pembinaan, pengubahsuaian dan pembaikan yang beroperasi di Kelantan, komited memberikan mutu kerja kemas, cekap dan berintegriti tinggi.
           </p>
         </section>
 
@@ -52,14 +52,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </p>
             <div className="p-6 rounded-2xl pearl-glass border border-white/15 space-y-3 mt-6">
               <div className="text-sm uppercase tracking-wider text-neutral-400 font-semibold">
-                Status Pendaftaran Rasmi
+                Maklumat Pendaftaran Dalam Profil
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 {COMPANY_INFO.registrationNo}
               </div>
               <div className="text-sm text-neutral-300 space-y-1">
                 <p>Bentuk Perniagaan: {COMPANY_INFO.businessType}</p>
-                <p>Status Pendaftaran: <span className="text-white font-semibold">AKTIF</span> (sehingga 27 Oktober 2026)</p>
+                <p>Rekod profil: dokumen SSM bertarikh 31 Januari 2023; tarikh luput yang tertera ialah 27 Oktober 2026.</p>
                 <p>Pendaftar Perniagaan Semenanjung Malaysia (SSM EZBIZ)</p>
               </div>
             </div>
@@ -135,6 +135,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
           </div>
         </section>
 
+        <section className="space-y-6"><h2 className="text-3xl sm:text-4xl text-white">Objektif Kami</h2><p className="text-lg text-neutral-300">Tumpuan kami ialah kualiti perkhidmatan, kecekapan kerja dan pembangunan komuniti seperti yang digariskan dalam misi serta latar belakang syarikat.</p><div className="grid md:grid-cols-3 gap-6">{COMPANY_INFO.objectives.map(item=><div key={item.id} className="pearl-glass p-7 rounded-2xl"><h3 className="text-2xl text-white mb-3">{item.title}</h3><p className="text-lg text-neutral-300">{item.description}</p></div>)}</div></section>
         {/* ======================================================== */}
         {/* Carta Organisasi & Pengurusan (Org Chart from PDF Page 9) */}
         {/* ======================================================== */}
@@ -148,7 +149,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               Kenali Pasukan Kami
             </h2>
             <p className="text-neutral-300 text-lg sm:text-[20px] max-w-2xl">
-              Struktur kepimpinan dan pengurusan projek yang menyelia setiap fasa pelaksanaan tapak.
+              Struktur kepimpinan dan peranan pengurusan seperti dalam carta organisasi profil syarikat.
             </p>
           </div>
 
@@ -245,15 +246,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 <span>BAHAGIAN OPERASI</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
-                Kekuatan Tenaga Lapangan
+                Bahagian Operasi Dalam Profil
               </h2>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-extrabold text-white font-mono">43 Orang</div>
-              <div className="text-sm text-neutral-400">Jumlah Pekerja Operasi Khusus</div>
+              <div className="text-3xl font-extrabold text-white font-mono">6 Bahagian</div>
+              <div className="text-sm text-neutral-400">Bidang Operasi Dalam Profil</div>
             </div>
           </div>
 
+          <p className="text-lg text-neutral-300">Bilangan di bawah ialah rekod dalam profil syarikat, bukan pengesahan jumlah pekerja semasa.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {COMPANY_INFO.operationsWorkforce.map((dept, idx) => (
               <div
@@ -264,7 +266,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-white">{dept.name}</h3>
                     <span className="px-3 py-1 rounded-full bg-white/10 text-white font-mono font-bold text-sm border border-white/20">
-                      {dept.headcount} orang
+                      Rekod profil: {dept.headcount} orang
                     </span>
                   </div>
                   <p className="text-sm text-neutral-300 leading-relaxed">
@@ -292,10 +294,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               <span>PENGIKTIRAFAN TEKNIKAL</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
-              Aplikator Berdaftar Pengilang
+              Rekod Pengiktirafan Aplikator
             </h2>
             <p className="text-neutral-300 text-lg sm:text-[20px] max-w-2xl">
-              Pengesahan kelayakan dan surat rasmi lantikan sebagai aplikator berwibawa bagi aplikasi cat berwaranti.
+              Surat pengiktirafan aplikator yang disertakan dalam profil syarikat. Sebarang jaminan tertakluk kepada skop projek dan syarat pengilang.
             </p>
           </div>
 

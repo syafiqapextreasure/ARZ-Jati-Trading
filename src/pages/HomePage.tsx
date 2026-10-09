@@ -1,3 +1,4 @@
+import { HomeHero } from '../components/HomeHero';
 import React, { useState } from 'react';
 import {
   ArrowRight,
@@ -80,114 +81,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
   };
 
   return (
-    <div className="w-full text-neutral-100 selection:bg-neutral-200 selection:text-neutral-900">
+    <div className="home-page w-full text-neutral-100 selection:bg-neutral-200 selection:text-neutral-900">
       
       {/* ======================================================== */}
       {/* 1. HERO SECTION (Matching Concept 2 Pearl Glass) */}
       {/* ======================================================== */}
-      <section className="relative min-h-[92vh] flex flex-col justify-between overflow-hidden">
-        {/* Full Natural Colour Background Image with Subtle Scrim */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={IMAGES.heroBungalow}
-            alt="Ilustrasi kediaman banglo moden ARZ Jati Trading"
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center select-none"
-          />
-          {/* Subtle gradient scrim preserving bright warm illumination */}
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/45 to-neutral-950/60" />
-        </div>
-
-        {/* Hero Top Spacing */}
-        <div className="pt-12 sm:pt-20" />
-
-        {/* Hero Main Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8">
-          <div className="max-w-3xl space-y-6">
-            
-            {/* Kicker */}
-            <div className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-semibold tracking-widest uppercase text-neutral-300">
-              <span className="w-8 h-[2px] bg-white/70 inline-block" />
-              <span>RUMAH LEBIH DARIPADA SEKADAR BANGUNAN</span>
-            </div>
-
-            {/* Display Headline (36-64px per guidelines) */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] text-balance">
-              Bina Impian.<br />
-              <span className="text-neutral-100">Cipta Keyakinan.</span>
-            </h1>
-
-            {/* Body Subtitle (Desktop 20px / Mobile 18px) */}
-            <p className="text-lg sm:text-[20px] text-neutral-200 leading-relaxed max-w-2xl font-normal drop-shadow-sm">
-              {COMPANY_INFO.heroSubheadline}
-            </p>
-
-            {/* CTAs */}
-            <div className="pt-3 flex flex-wrap items-center gap-4">
-              <a
-                href="#bincang"
-                className="min-h-[50px] px-7 py-3 rounded-xl bg-white text-neutral-950 font-bold text-lg hover:bg-neutral-200 active:scale-[0.98] transition-all duration-200 shadow-xl inline-flex items-center gap-3 group focus-visible:ring-2 focus-visible:ring-white"
-              >
-                <span>Bincang Projek Anda</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
-              </a>
-
-              <button
-                type="button"
-                onClick={() => onNavigate('/projek')}
-                className="min-h-[50px] px-7 py-3 rounded-xl pearl-glass border border-white/25 text-white font-semibold text-lg hover:bg-white/15 active:scale-[0.98] transition-all duration-200 shadow-lg cursor-pointer focus-visible:ring-2 focus-visible:ring-white"
-              >
-                Lihat Projek
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Floating Pearl Glass Triple Pillar Strip (Concept 2 Anchor) */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-8 sm:pb-12">
-          <div className="pearl-glass rounded-2xl border border-white/20 p-5 sm:p-6 shadow-2xl">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-white/15">
-              
-              <div className="flex items-center gap-4 sm:px-4 pt-3 sm:pt-0">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <Home className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-bold text-white text-lg">Kediaman Lebih Selesa</h2>
-                  <p className="text-sm text-neutral-300">Reka bentuk praktikal & suasana tenang</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 sm:px-6 pt-3 sm:pt-0">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <ShieldCheck className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-bold text-white text-lg">Mutu Kerja Dipercayai</h2>
-                  <p className="text-sm text-neutral-300">Aplikator beriktiraf KCC & Sissons</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 sm:px-6 pt-3 sm:pt-0">
-                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 border border-white/15">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="font-bold text-white text-lg">Ruang Untuk Masa Depan</h2>
-                  <p className="text-sm text-neutral-300">Struktur kukuh generasi ke generasi</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
+      <HomeHero onNavigate={onNavigate} />
 
       {/* ======================================================== */}
       {/* 2. APA YANG KAMI LAKUKAN / KEPAKARAN KAMI */}
       {/* ======================================================== */}
-      <section className="py-20 sm:py-28 bg-neutral-950 border-b border-white/10 relative">
+      <section className="light-section home-services py-20 sm:py-28 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
@@ -213,7 +117,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
                   src={IMAGES.serviceBinaRumah}
-                  alt="Perkhidmatan Bina Rumah ARZ Jati Trading"
+                  alt="Ilustrasi perkhidmatan Bina Rumah ARZ Jati Trading"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
                 />
@@ -350,11 +254,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 1: Rumah Kediaman */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox([IMAGES.serviceBinaRumah], 0, 'Rumah Kediaman Setingkat')}
+              onClick={() => onOpenLightbox([IMAGES.originalHouse], 0, 'Rumah Kediaman Setingkat')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src={IMAGES.serviceBinaRumah}
+                  src={IMAGES.originalHouse}
                   alt="Rumah Kediaman Setingkat"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -373,12 +277,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Project 2: Kemasan Lantai */}
             <div
               className="group cursor-pointer rounded-2xl overflow-hidden pearl-glass-card"
-              onClick={() => onOpenLightbox([IMAGES.projectTilingFlooring], 0, 'Kemasan Lantai Jubin Porselin')}
+              onClick={() => onOpenLightbox([IMAGES.originalFloor], 0, 'Kemasan Lantai Jubin')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src={IMAGES.projectTilingFlooring}
-                  alt="Kemasan Lantai Jubin Porselin"
+                  src={IMAGES.originalFloor}
+                  alt="Kemasan Lantai Jubin"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -388,7 +292,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   Kemasan Lantai
                 </h3>
                 <p className="text-sm text-neutral-400 mt-1">
-                  Jubin porselin format besar ruang tamu
+                  Kerja pemasangan dan kemasan jubin
                 </p>
               </div>
             </div>
@@ -411,7 +315,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   Gelanggang Sukan
                 </h3>
                 <p className="text-sm text-neutral-400 mt-1">
-                  Cat akrilik Sekolah Integrasi Tanah Merah
+                  Sekolah Integrasi Tanah Merah
                 </p>
               </div>
             </div>
@@ -494,7 +398,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
       {/* ======================================================== */}
       {/* 5. NILAI & FAKTA SYARIKAT (Source Supported Statements) */}
       {/* ======================================================== */}
-      <section className="py-20 sm:py-24 bg-neutral-950 border-b border-white/10">
+      <section className="light-section py-20 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -521,16 +425,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               </div>
             </div>
 
-            {/* Fact Cards Strip (43 total operations staff listed in PDF p10) */}
+            {/* Fact Cards Strip (6 total operations staff listed in PDF p10) */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
               
               <div className="p-6 rounded-2xl pearl-glass border border-white/15 space-y-3">
                 <div className="text-4xl font-extrabold text-white font-mono">
-                  43
+                  6
                 </div>
-                <h3 className="text-xl font-bold text-white">Tenaga Operasi Lapangan</h3>
+                <h3 className="text-xl font-bold text-white">Bahagian Operasi</h3>
                 <p className="text-base text-neutral-300">
-                  Meliputi 11 pekerja pembinaan, 10 cat, 8 tambak tanah, 6 mozek, 5 pembekalan & 3 reka bentuk.
+                  Pembinaan, cat, mozek, reka bentuk, tambak tanah serta pembekalan dan servis seperti dalam profil syarikat.
                 </p>
               </div>
 
@@ -541,18 +445,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                 </div>
                 <h3 className="text-xl font-bold text-white">KCC & Sissons Paints</h3>
                 <p className="text-base text-neutral-300">
-                  Diperakui secara rasmi dengan sokongan teknikal pengilang dan waranti bahan cat sah.
+                  Diperakui secara rasmi dengan sokongan teknikal pengilang dan syarat jaminan mengikut projek dan pengilang.
                 </p>
               </div>
 
               <div className="p-6 rounded-2xl pearl-glass border border-white/15 space-y-3">
                 <div className="text-xl font-bold text-white flex items-center gap-2">
                   <MapPin className="w-6 h-6 text-white" />
-                  <span>Liputan Semenanjung</span>
+                  <span>Lokasi Kami</span>
                 </div>
                 <h3 className="text-xl font-bold text-white">Kelantan & Luar Negeri</h3>
                 <p className="text-base text-neutral-300">
-                  Ibu pejabat di Wakaf Bharu dengan rekod projek di Terengganu, Perak, Kedah, Pulau Pinang & KL.
+                  Berpangkalan di Wakaf Bharu. Hubungi kami untuk menyemak liputan projek semasa.
                 </p>
               </div>
 
@@ -561,7 +465,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   <CheckCircle className="w-6 h-6 text-white" />
                   <span>Pendaftaran Rasmi</span>
                 </div>
-                <h3 className="text-xl font-bold text-white">SSM Sah & Aktif</h3>
+                <h3 className="text-xl font-bold text-white">Maklumat Pendaftaran SSM</h3>
                 <p className="text-base text-neutral-300">
                   No. Pendaftaran <span className="font-mono text-white">200803154273</span> diperakui Suruhanjaya Syarikat Malaysia.
                 </p>
@@ -577,7 +481,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
       {/* ======================================================== */}
       {/* 6. HUBUNGI KAMI / MARI BINCANG PROJEK ANDA */}
       {/* ======================================================== */}
-      <section id="bincang" className="py-20 sm:py-28 bg-neutral-950 relative">
+      <section id="bincang" data-theme="light" className="py-20 sm:py-28 bg-neutral-950 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="max-w-3xl mb-12 space-y-3">

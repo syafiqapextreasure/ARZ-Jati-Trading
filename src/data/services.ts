@@ -75,7 +75,7 @@ export const SERVICES: ServiceItem[] = [
     deliverables: [
       'Pilihan palet warna dan cadangan sistem cat pengilang',
       'Penyediaan permukaan (waterjet & undercoat sealer primer)',
-      'Jaminan mutu aplikasi cat',
+      'Skop aplikasi dan syarat jaminan dibincangkan mengikut projek',
     ],
     whatsappPrompt: 'Salam ARZ Jati Trading, saya ingin bertanya tentang perkhidmatan mengecat (kediaman / komersial / epoxy / bumbung).',
   },
@@ -107,7 +107,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Visualisasi Ruang & Kemasan Dalaman Khusus',
     shortDescription: 'Perancangan konsep 3D reka bentuk kediaman serta pembuatan kabinet hiasan dan kabinet dapur.',
     fullDescription: 'Kami membantu menterjemahkan idea pemilik kepada visualisasi reka bentuk yang jelas sebelum pembinaan dimulakan, di samping menyediakan produk pertukangan dalaman seperti kabinet dapur dan panel TV moden.',
-    heroImage: IMAGES.projectVillaPool,
+    heroImage: IMAGES.serviceDesign,
     features: [
       'Ilustrasi visualisasi konsep reka bentuk 3D kediaman',
       'Reka letak ruang dalaman ergonomik dan praktikal',
@@ -150,7 +150,7 @@ export const SERVICES: ServiceItem[] = [
     kicker: 'Penyelenggaraan Sistem Penyaman Udara & Tapak',
     shortDescription: 'Pemasangan unit penyaman udara, servis cucian kimia cooling coil, dan penyelenggaraan peralatan teknikal.',
     fullDescription: 'Pasukan teknikal kami bersedia menyokong keperluan pengudaraan dan kemudahan tapak dengan servis berkala bagi unit penyaman udara kediaman dan pejabat.',
-    heroImage: IMAGES.heroBungalow,
+    heroImage: IMAGES.serviceMaintenance,
     features: [
       'Pemasangan unit penyaman udara (indoor & outdoor compressor)',
       'Servis kimia (chemical overhaul) menyeluruh cooling coil & blower',
@@ -160,7 +160,7 @@ export const SERVICES: ServiceItem[] = [
     deliverables: [
       'Pemeriksaan diagnostik sebelum servis',
       'Pembersihan komponen dengan peralatan tekanan terkawal',
-      'Jaminan fungsi penyejukan optimum',
+      'Semakan fungsi selepas servis',
     ],
     whatsappPrompt: 'Salam ARZ Jati Trading, saya ingin menempah servis penyelenggaraan penyaman udara / peralatan.',
   },

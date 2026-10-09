@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { COMPANY_INFO } from '../data/company';
 
 export const FloatingWhatsApp: React.FC = () => {
-  const [tooltipDismissed, setTooltipDismissed] = useState(false);
+  const [tooltipDismissed, setTooltipDismissed] = useState(true);
 
   return (
     <aside
@@ -33,7 +34,7 @@ export const FloatingWhatsApp: React.FC = () => {
         aria-label="Buka WhatsApp untuk berbincang projek dengan ARZ Jati Trading"
         title="WhatsApp ARZ Jati Trading (014-819 6216)"
       >
-        <MessageCircle className="w-7 h-7 fill-neutral-950 text-neutral-950" />
+        <WhatsAppIcon className="w-7 h-7" />
       </a>
     </aside>
   );

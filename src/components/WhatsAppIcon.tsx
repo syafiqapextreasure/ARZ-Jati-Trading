@@ -1,0 +1,2 @@
+import React from 'react';
+export const WhatsAppIcon=({className=''}:{className?:string})=><svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.6Z"/><path d="M8.3 7.4c-.6.1-1 1-.8 2 .5 2.4 2.8 4.8 5.3 5.5 1 .3 2-.1 2.4-.8l.4-1-2.4-1.1-.8.9c-1.4-.7-2.5-1.8-3.1-3.1l.8-.8-1.1-2.2Z" strokeLinejoin="round"/></svg>;
