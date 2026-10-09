@@ -7,6 +7,7 @@ import {
   Users,
   Wrench,
   Paintbrush,
+  PaintRoller,
   Layers,
   Phone,
   MapPin,
@@ -113,7 +114,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Card 1: Bina Rumah */}
-            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
+            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
                   src={IMAGES.serviceBinaRumah}
@@ -122,7 +123,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
                 />
               </div>
-              <div className="p-6 sm:p-7 flex items-center justify-between gap-4">
+              <div className="service-card-body"><span className="service-card-icon" aria-hidden="true"><Home/></span>
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold text-white group-hover:text-neutral-200 transition-colors">
                     Bina Rumah
@@ -143,7 +144,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             </div>
 
             {/* Card 2: Ubah Suai */}
-            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
+            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
                   src={IMAGES.serviceUbahSuai}
@@ -152,7 +153,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
                 />
               </div>
-              <div className="p-6 sm:p-7 flex items-center justify-between gap-4">
+              <div className="service-card-body"><span className="service-card-icon" aria-hidden="true"><Wrench/></span>
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold text-white group-hover:text-neutral-200 transition-colors">
                     Ubah Suai
@@ -173,7 +174,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             </div>
 
             {/* Card 3: Cat & Kemasan */}
-            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col justify-between">
+            <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
                 <img
                   src={IMAGES.serviceCatKemasan}
@@ -182,7 +183,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 select-none"
                 />
               </div>
-              <div className="p-6 sm:p-7 flex items-center justify-between gap-4">
+              <div className="service-card-body"><span className="service-card-icon" aria-hidden="true"><PaintRoller/></span>
                 <div className="space-y-1">
                   <h3 className="text-2xl font-bold text-white group-hover:text-neutral-200 transition-colors">
                     Cat & Kemasan
@@ -434,7 +435,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                 </div>
                 <h3 className="text-xl font-bold text-white">Bahagian Operasi</h3>
                 <p className="text-base text-neutral-300">
-                  Pembinaan, cat, mozek, reka bentuk, tambak tanah serta pembekalan dan servis seperti dalam profil syarikat.
+                  Pembinaan, cat, mozek, reka bentuk, tambak tanah serta pembekalan dan servis.
                 </p>
               </div>
 

@@ -32,7 +32,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             Kepakaran Menyeluruh Dari Asas Hingga Kemasan Akhir
           </h1>
           <p className="text-xl sm:text-[22px] text-neutral-300 leading-relaxed max-w-3xl">
-            Perkhidmatan pembinaan, pengubahsuaian dan kemasan berasaskan bidang operasi dalam profil syarikat.
+            Perkhidmatan pembinaan, pengubahsuaian dan kemasan berasaskan bidang operasi.
           </p>
         </section>
 

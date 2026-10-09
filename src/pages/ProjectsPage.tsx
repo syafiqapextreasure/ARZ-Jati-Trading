@@ -57,7 +57,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenLi
             Rekod Projek & Portfolio Kerja ARZ Jati Trading
           </h1>
           <p className="text-xl sm:text-[22px] text-neutral-300 leading-relaxed max-w-3xl">
-            Koleksi kerja pembinaan rumah, kerja cat korporat, lantai epoxy, gelanggang sukan dan kerja sivil yang disahkan dari fail profil syarikat.
+            Koleksi kerja pembinaan rumah, kerja cat korporat, lantai epoxy, gelanggang sukan dan kerja sivil.
           </p>
         </section>
 
@@ -236,17 +236,6 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenLi
                     <span>Perincian Skop</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
-
-                  <a
-                    href={`https://wa.me/60148196216?text=${encodeURIComponent(
-                      `Salam ARZ Jati Trading, saya berminat dengan projek '${proj.title}'. Boleh kongsikan sebut harga untuk skop berkaitan?`
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white text-neutral-200 hover:text-neutral-950 font-semibold transition-colors"
-                  >
-                    Tanya Skop Ini
-                  </a>
                 </div>
               </div>
             ))}

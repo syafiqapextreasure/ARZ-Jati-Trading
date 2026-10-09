@@ -1,3 +1,4 @@
+import { ContactPage } from './pages/ContactPage';
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -58,6 +59,7 @@ export default function App() {
     if (currentPath === '/' || currentPath === '') {
       return <HomePage onNavigate={navigate} onOpenLightbox={openLightbox} />;
     }
+    if (currentPath === '/hubungi-kami') return <ContactPage />;
     if (currentPath === '/tentang-kami') {
       return <AboutPage onNavigate={navigate} />;
     }

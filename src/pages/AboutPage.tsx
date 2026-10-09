@@ -52,14 +52,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             </p>
             <div className="p-6 rounded-2xl pearl-glass border border-white/15 space-y-3 mt-6">
               <div className="text-sm uppercase tracking-wider text-neutral-400 font-semibold">
-                Maklumat Pendaftaran Dalam Profil
+                Maklumat Pendaftaran
               </div>
               <div className="text-2xl font-bold text-white font-mono">
                 {COMPANY_INFO.registrationNo}
               </div>
               <div className="text-sm text-neutral-300 space-y-1">
                 <p>Bentuk Perniagaan: {COMPANY_INFO.businessType}</p>
-                <p>Rekod profil: dokumen SSM bertarikh 31 Januari 2023; tarikh luput yang tertera ialah 27 Oktober 2026.</p>
+                <p>Dokumen SSM bertarikh 31 Januari 2023; tarikh luput yang tertera ialah 27 Oktober 2026.</p>
                 <p>Pendaftar Perniagaan Semenanjung Malaysia (SSM EZBIZ)</p>
               </div>
             </div>
@@ -149,7 +149,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               Kenali Pasukan Kami
             </h2>
             <p className="text-neutral-300 text-lg sm:text-[20px] max-w-2xl">
-              Struktur kepimpinan dan peranan pengurusan seperti dalam carta organisasi profil syarikat.
+              Kenali kepimpinan dan pasukan pengurusan kami.
             </p>
           </div>
 
@@ -246,16 +246,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                 <span>BAHAGIAN OPERASI</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
-                Bahagian Operasi Dalam Profil
+                Bahagian Operasi
               </h2>
             </div>
             <div className="text-right">
               <div className="text-3xl font-extrabold text-white font-mono">6 Bahagian</div>
-              <div className="text-sm text-neutral-400">Bidang Operasi Dalam Profil</div>
+              <div className="text-sm text-neutral-400">Bidang Operasi</div>
             </div>
           </div>
 
-          <p className="text-lg text-neutral-300">Bilangan di bawah ialah rekod dalam profil syarikat, bukan pengesahan jumlah pekerja semasa.</p>
+          <p className="text-lg text-neutral-300">Pasukan kami merangkumi enam bidang operasi utama.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {COMPANY_INFO.operationsWorkforce.map((dept, idx) => (
               <div
@@ -266,7 +266,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-white">{dept.name}</h3>
                     <span className="px-3 py-1 rounded-full bg-white/10 text-white font-mono font-bold text-sm border border-white/20">
-                      Rekod profil: {dept.headcount} orang
+                      Pasukan {dept.name.toLowerCase()}
                     </span>
                   </div>
                   <p className="text-sm text-neutral-300 leading-relaxed">
@@ -297,7 +297,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
               Rekod Pengiktirafan Aplikator
             </h2>
             <p className="text-neutral-300 text-lg sm:text-[20px] max-w-2xl">
-              Surat pengiktirafan aplikator yang disertakan dalam profil syarikat. Sebarang jaminan tertakluk kepada skop projek dan syarat pengilang.
+              Pengiktirafan aplikator daripada pengilang cat. Sebarang jaminan tertakluk kepada skop projek dan syarat pengilang.
             </p>
           </div>
 

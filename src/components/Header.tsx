@@ -17,10 +17,11 @@ export const Header:React.FC<HeaderProps>=({currentPath,onNavigate})=>{
  <div className="nav-services"><button ref={serviceButton} aria-expanded={services} aria-controls="services-menu" onClick={()=>setServices(!services)}>Perkhidmatan <ChevronDown size={15}/></button>
  {services&&<div id="services-menu" className="nav-dropdown"><a href="/perkhidmatan" onClick={e=>{e.preventDefault();go('/perkhidmatan')}}>Semua Perkhidmatan</a><a href="/sewa-peralatan" onClick={e=>{e.preventDefault();go('/sewa-peralatan')}}>Sewa Peralatan</a></div>}</div>
  <a href="/projek" aria-current={currentPath.startsWith('/projek')?'page':undefined} onClick={e=>{e.preventDefault();go('/projek')}}>Projek</a>
+ <a href="/hubungi-kami" aria-current={currentPath==='/hubungi-kami'?'page':undefined} onClick={e=>{e.preventDefault();go('/hubungi-kami')}}>Hubungi Kami</a>
  </nav>
  <a className="header-whatsapp" href="https://wa.me/60148196216?text=Salam%20ARZ%20Jati%20Trading%2C%20saya%20ingin%20berbincang%20mengenai%20projek." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ARZ Jati Trading"><WhatsAppIcon/><span>WhatsApp</span></a>
  <button ref={menuButton} className="menu-toggle" aria-label={open?'Tutup menu':'Buka menu'} aria-expanded={open} aria-controls="mobile-nav" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button>
  </div>
- {open&&<nav id="mobile-nav" className="mobile-nav" aria-label="Navigasi mudah alih">{[['Tentang Kami','/tentang-kami'],['Perkhidmatan','/perkhidmatan'],['Sewa Peralatan','/sewa-peralatan'],['Projek','/projek']].map(([label,path])=><a key={path} href={path} onClick={e=>{e.preventDefault();go(path)}}>{label}</a>)}</nav>}
+ {open&&<nav id="mobile-nav" className="mobile-nav" aria-label="Navigasi mudah alih">{[['Tentang Kami','/tentang-kami'],['Perkhidmatan','/perkhidmatan'],['Sewa Peralatan','/sewa-peralatan'],['Projek','/projek'],['Hubungi Kami','/hubungi-kami']].map(([label,path])=><a key={path} href={path} onClick={e=>{e.preventDefault();go(path)}}>{label}</a>)}</nav>}
  </header>;
 };

@@ -35,7 +35,7 @@ export const COMPANY_INFO = {
   businessType: 'Pemilikan Tunggal (Sole Proprietorship)',
   ssmStartDate: '20-07-2008',
   ssmExpiryDate: '27-10-2026',
-  ssmStatus: 'Seperti rekod profil bertarikh 31-01-2023',
+  ssmStatus: 'Rekod pendaftaran bertarikh 31-01-2023',
   ssmUpdateDate: '31-01-2023',
   address: {
     line1: 'PT2907 Tingkat Atas',
@@ -62,7 +62,7 @@ export const COMPANY_INFO = {
   // Background narrative from Company Profile (Page 8)
   narrative: {
     origin: 'ARZ JATI TRADING beroperasi berasaskan komitmen teguh untuk merealisasikan kediaman idaman dan kemudahan berkualiti bagi komuniti setempat di Kelantan dan negeri-negeri sekitar.',
-    expansion: 'Profil syarikat merekodkan langkah pengembangan pada Disember 2022 ke Terengganu, Perak, Kedah, Pulau Pinang dan Kuala Lumpur. Hubungi kami untuk menyemak liputan perkhidmatan semasa.',
+    expansion: 'Langkah pengembangan bermula pada Disember 2022 ke Terengganu, Perak, Kedah, Pulau Pinang dan Kuala Lumpur. Hubungi kami untuk menyemak liputan perkhidmatan semasa.',
     commitment: 'Kami komited memberikan perkhidmatan yang cekap, kemas, dan dipercayai dengan penyeliaan tapak yang teliti demi kepuasan pelanggan serta pembangunan komuniti.',
   },
 

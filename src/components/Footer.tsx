@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenChecklist }) =
             <h3 className="text-white text-lg font-bold tracking-wider uppercase">
               Pautan Pantas
             </h3>
-            <ul className="space-y-3 text-lg">
+            <ul className="space-y-3 text-lg"><li><button onClick={() => onNavigate('/hubungi-kami')} className="hover:text-white">Hubungi Kami</button></li>
               <li>
                 <button
                   onClick={() => onNavigate('/')}
