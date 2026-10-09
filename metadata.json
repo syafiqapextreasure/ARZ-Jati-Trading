@@ -1,0 +1,6 @@
+{
+  "name": "ARZ Jati Trading",
+  "description": "Laman web rasmi ARZ Jati Trading - Kontraktor bina rumah, pengubahsuaian, kerja cat, mozek dan sivil di Wakaf Bharu, Kelantan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
