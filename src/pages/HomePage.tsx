@@ -258,7 +258,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src={IMAGES.originalHouse}
+                  src={IMAGES.featuredHouse}
                   alt="Rumah Kediaman Setingkat"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -281,7 +281,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src={IMAGES.originalFloor}
+                  src={IMAGES.featuredFloor}
                   alt="Kemasan Lantai Jubin"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -304,7 +304,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
                 <img
-                  src={IMAGES.projectSportsCourt}
+                  src={IMAGES.featuredCourt}
                   alt="Gelanggang Sukan Sekolah Integrasi Tanah Merah"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

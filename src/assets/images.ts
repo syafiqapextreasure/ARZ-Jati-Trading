@@ -1,3 +1,6 @@
+import featuredHouse from './enhanced/featured-house.webp';
+import featuredFloor from './enhanced/featured-floor.webp';
+import featuredCourt from './enhanced/featured-court.webp';
 // Vite imports: missing files fail the build instead of becoming broken production URLs.
 import heroBungalow from './enhanced/hero-design.webp';
 import serviceBinaRumah from './enhanced/construction.webp';
@@ -13,4 +16,4 @@ import projectSportsCourt from './portfolio/page-27-image-02.png';
 import projectPerodua from './portfolio/page-22-image-02.png';
 import projectWismaAudit from './portfolio/page-20-image-02.png';
 import projectVillaPool from './portfolio/page-13-image-01.jpg';
-export const IMAGES = { heroBungalow, serviceBinaRumah, serviceUbahSuai, serviceCatKemasan, projectTilingFlooring, equipmentRental, serviceMaintenance, serviceDesign, originalHouse, originalFloor, projectSportsCourt, projectPerodua, projectWismaAudit, projectVillaPool } as const;
+export const IMAGES = { featuredHouse, featuredFloor, featuredCourt, heroBungalow, serviceBinaRumah, serviceUbahSuai, serviceCatKemasan, projectTilingFlooring, equipmentRental, serviceMaintenance, serviceDesign, originalHouse, originalFloor, projectSportsCourt, projectPerodua, projectWismaAudit, projectVillaPool } as const;
