@@ -50,9 +50,6 @@ button {cursor:pointer}
 .desktop-nav {display:flex;align-items:center;gap:30px;margin-left:auto;font-size:18px}
 .desktop-nav a,.desktop-nav button {min-height:48px;display:flex;align-items:center;gap:6px;white-space:nowrap}
 .desktop-nav a:hover,.desktop-nav button:hover {text-decoration:underline;text-underline-offset:7px}
-.nav-services {position:relative}
-.nav-dropdown {position:absolute;top:100%;left:0;min-width:270px;background:#242424f5;backdrop-filter:blur(18px);border:1px solid #ffffff40;border-radius:12px;padding:12px;box-shadow:0 20px 50px #0005}
-.nav-dropdown a {padding:8px 12px}
 .header-whatsapp {display:flex;align-items:center;justify-content:center;gap:10px;background:#fff;color:#121212;border-radius:9px;min-height:52px;padding:12px 24px;font-size:18px;font-weight:600;white-space:nowrap}
 .menu-toggle {display:none;width:48px;height:48px;align-items:center;justify-content:center}
 .mobile-nav {padding:12px 24px 24px;background:#252525;display:grid;border-top:1px solid #ffffff30}

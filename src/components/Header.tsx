@@ -1,21 +1,19 @@
 import React, {useEffect,useRef,useState} from 'react';
 import {ArzLogo} from './ArzLogo';
-import {Menu,X,ChevronDown} from 'lucide-react';
+import {Menu,X} from 'lucide-react';
 import {WhatsAppIcon} from './WhatsAppIcon';
 interface HeaderProps {currentPath:string;onNavigate:(path:string)=>void}
 export const Header:React.FC<HeaderProps>=({currentPath,onNavigate})=>{
- const [open,setOpen]=useState(false),[services,setServices]=useState(false);
- const ref=useRef<HTMLElement>(null),menuButton=useRef<HTMLButtonElement>(null),serviceButton=useRef<HTMLButtonElement>(null);
- useEffect(()=>{setOpen(false);setServices(false)},[currentPath]);
- useEffect(()=>{const close=(e:MouseEvent)=>{if(!ref.current?.contains(e.target as Node))setServices(false)};document.addEventListener('mousedown',close);return()=>document.removeEventListener('mousedown',close)},[]);
- const go=(path:string)=>{setOpen(false);setServices(false);onNavigate(path)};
- return <header ref={ref} className={`site-header ${currentPath==='/'?'site-header--home':''}`} onKeyDown={e=>{if(e.key==='Escape'){if(open){setOpen(false);menuButton.current?.focus()}else{setServices(false);serviceButton.current?.focus()}}}}>
+ const [open,setOpen]=useState(false);
+ const menuButton=useRef<HTMLButtonElement>(null);
+ useEffect(()=>{setOpen(false)},[currentPath]);
+ const go=(path:string)=>{setOpen(false);onNavigate(path)};
+ return <header className={`site-header ${currentPath==='/'?'site-header--home':''}`} onKeyDown={e=>{if(e.key==='Escape'&&open){setOpen(false);menuButton.current?.focus()}}}>
  <div className="header-inner">
  <a href="/" onClick={e=>{e.preventDefault();go('/')}} aria-label="ARZ Jati Trading — Laman Utama"><ArzLogo size="sm"/></a>
  <nav className="desktop-nav" aria-label="Navigasi utama">
  <a href="/tentang-kami" aria-current={currentPath==='/tentang-kami'?'page':undefined} onClick={e=>{e.preventDefault();go('/tentang-kami')}}>Tentang Kami</a>
- <div className="nav-services"><button ref={serviceButton} aria-expanded={services} aria-controls="services-menu" onClick={()=>setServices(!services)}>Perkhidmatan <ChevronDown size={15}/></button>
- {services&&<div id="services-menu" className="nav-dropdown"><a href="/perkhidmatan" onClick={e=>{e.preventDefault();go('/perkhidmatan')}}>Semua Perkhidmatan</a><a href="/sewa-peralatan" onClick={e=>{e.preventDefault();go('/sewa-peralatan')}}>Sewa Peralatan</a></div>}</div>
+ <a href="/perkhidmatan" aria-current={currentPath==='/perkhidmatan'?'page':undefined} onClick={e=>{e.preventDefault();go('/perkhidmatan')}}>Perkhidmatan</a>
  <a href="/projek" aria-current={currentPath.startsWith('/projek')?'page':undefined} onClick={e=>{e.preventDefault();go('/projek')}}>Projek</a>
  <a href="/hubungi-kami" aria-current={currentPath==='/hubungi-kami'?'page':undefined} onClick={e=>{e.preventDefault();go('/hubungi-kami')}}>Hubungi Kami</a>
  </nav>
