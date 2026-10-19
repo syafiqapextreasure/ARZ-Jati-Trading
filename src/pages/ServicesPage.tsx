@@ -19,8 +19,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
   const activeService = SERVICES.find((s) => s.id === selectedServiceId) || SERVICES[0];
 
   return (
-    <div className="light-section services-page w-full py-12 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
+    <div className="light-section services-page w-full py-10 sm:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
         
         {/* Header Hero */}
         <section className="space-y-6 max-w-4xl">
@@ -35,8 +35,6 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
             Perkhidmatan pembinaan, pengubahsuaian dan kemasan berasaskan bidang operasi.
           </p>
         </section>
-
-        <p className="text-base text-neutral-400">Ilustrasi perkhidmatan dijana AI berasaskan rujukan projek ARZ. Foto projek asal boleh dilihat dalam portfolio.</p>
         {/* Equipment Rental Promo Bar within Services */}
         <div className="p-6 sm:p-8 rounded-2xl pearl-glass border border-white/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-center gap-4">
@@ -132,7 +130,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               {/* Service Visual Preview */}
               <div className="lg:col-span-6">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/20 shadow-xl bg-neutral-900">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={activeService.heroImage}
                     alt={activeService.title}
                     referrerPolicy="no-referrer"
@@ -165,7 +163,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               >
                 <div className="space-y-4">
                   <div className="aspect-[16/9] rounded-xl overflow-hidden bg-neutral-900 border border-white/10">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={srv.heroImage}
                       alt={srv.title}
                       referrerPolicy="no-referrer"

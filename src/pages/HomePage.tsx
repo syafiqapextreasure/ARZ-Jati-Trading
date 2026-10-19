@@ -1,3 +1,4 @@
+import {SearchContent} from '../components/SearchContent';
 import { HomeHero } from '../components/HomeHero';
 import React, { useState } from 'react';
 import {
@@ -116,7 +117,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Card 1: Bina Rumah */}
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.serviceBinaRumah}
                   alt="Ilustrasi perkhidmatan Bina Rumah ARZ Jati Trading"
                   referrerPolicy="no-referrer"
@@ -146,7 +147,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Card 2: Ubah Suai */}
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.serviceUbahSuai}
                   alt="Perkhidmatan Ubah Suai Rumah ARZ Jati Trading"
                   referrerPolicy="no-referrer"
@@ -176,7 +177,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
             {/* Card 3: Cat & Kemasan */}
             <div className="group rounded-2xl overflow-hidden pearl-glass-card flex flex-col">
               <div className="relative aspect-[4/3] overflow-hidden bg-neutral-900">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.serviceCatKemasan}
                   alt="Perkhidmatan Cat dan Kemasan Khas ARZ Jati Trading"
                   referrerPolicy="no-referrer"
@@ -258,7 +259,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               onClick={() => onOpenLightbox([IMAGES.projectVillaPool], 0, 'Rumah Kediaman dengan Kolam Renang — Foto Asal')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.featuredHouse}
                   alt="Visual rumah kediaman dengan kolam renang"
                   referrerPolicy="no-referrer"
@@ -281,7 +282,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               onClick={() => onOpenLightbox([IMAGES.originalFloor], 0, 'Kemasan Lantai Jubin')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.featuredFloor}
                   alt="Kemasan Lantai Jubin"
                   referrerPolicy="no-referrer"
@@ -304,7 +305,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               onClick={() => onOpenLightbox([IMAGES.projectSportsCourt], 0, 'Gelanggang Sukan Sekolah Integrasi Tanah Merah')}
             >
               <div className="aspect-[4/3] overflow-hidden bg-neutral-900 relative">
-                <img
+                <img loading="lazy" decoding="async"
                   src={IMAGES.featuredCourt}
                   alt="Gelanggang Sukan Sekolah Integrasi Tanah Merah"
                   referrerPolicy="no-referrer"
@@ -344,7 +345,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
           <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl">
             {/* Machinery Background with Dimming Scrim */}
             <div className="absolute inset-0 z-0">
-              <img
+              <img loading="lazy" decoding="async"
                 src={IMAGES.equipmentRental}
                 alt="Peralatan pembinaan dan jentera sokongan tapak"
                 referrerPolicy="no-referrer"
@@ -706,6 +707,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
         </div>
       </section>
 
+      <SearchContent/>
     </div>
   );
 };

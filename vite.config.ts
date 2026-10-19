@@ -5,7 +5,13 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), {
+      name: 'exclude-unused-legacy-images',
+      async closeBundle() {
+        const {rm} = await import('node:fs/promises');
+        await rm(fileURLToPath(new URL('./dist/images', import.meta.url)), {recursive:true, force:true});
+      },
+    }],
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('.', import.meta.url)),

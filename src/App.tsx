@@ -1,3 +1,6 @@
+import {Seo} from './components/Seo';
+import {RegionPage} from './pages/RegionPage';
+import {REGION_PAGES} from './data/seo';
 import { ContactPage } from './pages/ContactPage';
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
@@ -15,10 +18,10 @@ import { RentalPage } from './pages/RentalPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
-export default function App() {
+export default function App({initialPath}:{initialPath?:string}={}) {
   // Client-side routing with browser history support
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return window.location.pathname || '/';
+    return (initialPath ?? window.location.pathname).replace(/\/+$/, '') || '/';
   });
 
   // Lightbox state
@@ -33,7 +36,7 @@ export default function App() {
   // Sync with browser back/forward buttons
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname || '/');
+      setCurrentPath(window.location.pathname.replace(/\/+$/, '') || '/');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -59,6 +62,7 @@ export default function App() {
     if (currentPath === '/' || currentPath === '') {
       return <HomePage onNavigate={navigate} onOpenLightbox={openLightbox} />;
     }
+    if (REGION_PAGES.some(r=>r.path===currentPath)) return <RegionPage path={currentPath}/>;
     if (currentPath === '/hubungi-kami') return <ContactPage />;
     if (currentPath === '/tentang-kami') {
       return <AboutPage onNavigate={navigate} />;
@@ -91,7 +95,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-neutral-200 selection:text-neutral-900">
-      {/* Top Header */}
+      <Seo path={currentPath}/>{/* Top Header */}
       <Header currentPath={currentPath} onNavigate={navigate} />
 
       {/* Main Page Body */}

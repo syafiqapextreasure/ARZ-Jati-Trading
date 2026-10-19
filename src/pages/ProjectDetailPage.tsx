@@ -91,7 +91,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
           className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/20 bg-neutral-900 shadow-2xl cursor-pointer group"
           onClick={() => onOpenLightbox(project.gallery, 0, project.title)}
         >
-          <img
+          <img loading="lazy" decoding="async"
             src={project.coverImage}
             alt={project.title}
             referrerPolicy="no-referrer"

@@ -39,16 +39,17 @@ export const COMPANY_INFO = {
   ssmUpdateDate: '31-01-2023',
   address: {
     line1: 'PT2907 Tingkat Atas',
-    line2: 'Desa SBJ Putra Pasir Pekan',
-    postcode: '16250',
+    line2: 'Desa SBJ Putra, Kampung Pasir Pekan',
+    postcode: '16210',
     town: 'Wakaf Bharu',
     state: 'Kelantan',
-    full: 'PT2907 Tingkat Atas, Desa SBJ Putra Pasir Pekan, 16250 Wakaf Bharu, Kelantan',
+    full: 'PT2907 Tingkat Atas, Desa SBJ Putra, Kampung Pasir Pekan, 16210 Wakaf Bharu, Kelantan',
   },
   phone: '014-819 6216',
   phoneClean: '+60148196216',
   whatsappUrl: 'https://wa.me/60148196216',
-  tagline: 'Bina Impian. Cipta Keyakinan.',
+  mapUrl: 'https://maps.app.goo.gl/qRVA91LCqjztQhM69',
+  tagline: 'Bina Rumah Atas Tanah Sendiri',
   heroSubheadline: 'Pembinaan, pengubahsuaian dan pembaikan untuk ruang yang lebih baik.',
   
   // Geographical outreach

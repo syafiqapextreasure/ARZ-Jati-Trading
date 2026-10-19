@@ -228,14 +228,12 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenLi
 
                 {/* Card Footer Actions */}
                 <div className="p-6 sm:p-7 pt-0 border-t border-white/10 mt-2 flex items-center justify-between">
-                  <button
-                    type="button"
-                    onClick={() => onNavigate(`/projek/${proj.slug}`)}
+                  <a href={`/projek/${proj.slug}`}
                     className="text-white hover:underline text-sm font-semibold flex items-center gap-1.5 cursor-pointer"
                   >
                     <span>Perincian Skop</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -291,12 +289,11 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate, onOpenLi
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto shrink-0">
-                  <button
-                    onClick={() => onNavigate(`/projek/${proj.slug}`)}
+                  <a href={`/projek/${proj.slug}`}
                     className="min-h-[48px] px-5 py-2.5 rounded-xl pearl-glass border border-white/20 text-white font-semibold hover:bg-white/15 transition-colors text-center cursor-pointer"
                   >
                     Perincian Skop
-                  </button>
+                  </a>
                   <a
                     href={`https://wa.me/60148196216?text=${encodeURIComponent(
                       `Salam ARZ Jati Trading, saya berminat dengan projek '${proj.title}'.`

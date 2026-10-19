@@ -1,5 +1,5 @@
 export interface ProjectItem { id:string; slug:string; title:string; category:'pembinaan'|'pengubahsuaian'|'pengecatan'|'lantai'|'landskap'|'servis'|'reka-bentuk'; categoryLabel:string; location:string; yearPeriod?:string; isRenderConcept?:boolean; coverImage:string; gallery:string[]; shortSummary:string; fullDescription:string; scopeOfWork:string[]; clientOrLocationType:string; }
-const photos = import.meta.glob('../assets/portfolio/*.{jpg,png}', {eager:true,query:'?url',import:'default'}) as Record<string,string>;
+const photos = import.meta.glob('../assets/portfolio/*.webp', {eager:true,query:'?url',import:'default'}) as Record<string,string>;
 function gallery(pages:number[]){return Object.entries(photos).filter(([path])=>pages.some(page=>path.includes('page-'+page+'-'))).sort(([a],[b])=>a.localeCompare(b)).map(([,url])=>url)}
 export const PROJECTS:ProjectItem[] = [
 {id:"proj-wisma-audit",slug:"wisma-audit-tunjung-cat-bumbung",title:"Semburan Cat Bumbung Wisma Audit Tunjung",category:"pengecatan",categoryLabel:"Pengecatan",location:"Wisma Audit Tunjung",isRenderConcept:false,gallery:gallery([20]),coverImage:gallery([20])[0],shortSummary:"Kerja semburan cat bumbung.",fullDescription:"Kerja semburan cat bumbung.",scopeOfWork:["Kerja semburan cat bumbung."],clientOrLocationType:"Wisma Audit Tunjung"},
