@@ -1,4 +1,5 @@
 import {Seo} from './components/Seo';
+import {Analytics} from './components/Analytics';
 import {RegionPage} from './pages/RegionPage';
 import {REGION_PAGES} from './data/seo';
 import { ContactPage } from './pages/ContactPage';
@@ -95,7 +96,7 @@ export default function App({initialPath}:{initialPath?:string}={}) {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-neutral-200 selection:text-neutral-900">
-      <Seo path={currentPath}/>{/* Top Header */}
+      <Seo path={currentPath}/><Analytics path={currentPath}/>{/* Top Header */}
       <Header currentPath={currentPath} onNavigate={navigate} />
 
       {/* Main Page Body */}

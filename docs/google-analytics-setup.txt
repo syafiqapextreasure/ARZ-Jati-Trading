@@ -1,0 +1,41 @@
+Google Analytics 4 setup for ARZ Bina — arzbina.com
+
+1. Open https://analytics.google.com/ and sign in to the Google account that should own the business analytics.
+2. If this is your first Analytics account, choose Start measuring. Otherwise open Admin > Create > Account (or use your existing business account).
+3. Account name: ARZ Bina. Choose the account data-sharing settings you want.
+4. Create a property named ARZ Bina Website. Set reporting country/time zone to Malaysia (GMT+08:00) and currency to Malaysian Ringgit (MYR).
+5. Complete business details/objectives and accept Google's terms yourself after reviewing them.
+6. Under data collection choose Web. Website URL: https://arzbina.com ; stream name: ARZ Bina Website.
+7. Turn Enhanced measurement OFF for this stream and save. This implementation sends page_view events for full page loads and client-side navigation itself. Automatic history tracking would duplicate pageviews, and automatic outbound-link/form measurement can capture information from enquiry links. Do not install a second Google tag or a Google Tag Manager GA4 tag for the same stream.
+8. Create/open the Web stream and copy the Measurement ID beginning G-. Use the Measurement ID, not the numeric Stream ID, Property ID, GT- tag ID or a Measurement Protocol API secret.
+9. Send the G- code to this chat. It is a public website identifier. I can add it and deploy the website. No Google password or API secret is needed.
+
+Alternative: connect the ID yourself through Cloudflare
+1. Open Workers & Pages > arz-jati-trading > Settings > Builds > build variables/environment variables (labels can vary by dashboard version).
+2. Add VITE_GA_MEASUREMENT_ID with your G- code. This must be available during the Vite BUILD; setting only a Worker runtime binding will not update the built JavaScript.
+3. Rebuild and redeploy the latest commit. Use npm run build and the existing Wrangler deploy command.
+4. Leave VITE_GA_DEBUG unset/false for normal production. The repository fallback is src/data/analytics-config.ts if you prefer a source-controlled public ID.
+
+Verify after the Measurement ID is installed
+1. Open https://arzbina.com/ in a regular browser with analytics blockers disabled for your test.
+2. In Google Analytics open Reports > Realtime (or Realtime overview).
+3. Visit the homepage, Perkhidmatan and Projek. Confirm page_view events and the corresponding page titles/paths appear. Do not expect historical visits from before activation.
+4. Click a WhatsApp, phone, email or map link to test contact_click. You can close the destination without sending a message. A contact_click records intent, not a confirmed enquiry.
+5. Standard reports can take 24–48 hours to populate. Realtime is the quickest initial check; blockers, privacy controls and network filtering can prevent individual test visits from appearing.
+6. If using DebugView, set VITE_GA_DEBUG=true temporarily and rebuild; turn it off and rebuild after testing. This also permits testing on local/preview hosts, which are otherwise excluded.
+
+Events and privacy
+- page_view: page title, known page location, previous page/referrer. Query strings and fragments are excluded from custom page/referrer values.
+- contact_click: contact_method (whatsapp/phone/email/map) and the known page path. Full outgoing URLs, WhatsApp message drafts, form names, entered phone numbers, email addresses and notes are not included by the custom tracking code.
+- Google's tag may use analytics cookies and collect technical browser/device information. Google Signals and ad-personalization signals are disabled in this integration. The privacy page now describes analytics.
+- Collection is disabled until a valid Measurement ID is configured. Normal tracking is limited to arzbina.com and www.arzbina.com.
+
+Optional reporting setup
+- Add contact_method as an event-scoped custom dimension under Admin > Custom definitions to compare contact types in reports.
+- Mark contact_click as a key event only if you want enquiry-button clicks counted as a business outcome; it is not a verified sale or submitted message.
+- Link Search Console through Admin > Product links > Search Console links using your verified arzbina.com property, if both products are available in your account.
+
+Official references
+https://support.google.com/analytics/answer/9304153
+https://developers.google.com/analytics/devguides/collection/ga4/views
+https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications

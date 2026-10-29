@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/company';
+import {isAnalyticsConfigured} from '../lib/analytics';
 import { ShieldCheck, MessageCircle, Lock, ArrowLeft } from 'lucide-react';
 
 interface PrivacyPageProps {
@@ -71,7 +72,22 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onNavigate }) => {
 
           <div className="space-y-3">
             <h2 className="text-white font-bold text-2xl">
-              4. Hubungi Pegawai Privasi Kami
+              4. Analitik Penggunaan Laman
+            </h2>
+            <p>
+              {isAnalyticsConfigured() ? 'Laman ini menggunakan Google Analytics 4' : 'Apabila diaktifkan, Google Analytics 4 digunakan'} untuk memahami halaman yang dilawati dan interaksi dengan butang hubungan. Google boleh menggunakan kuki serta maklumat teknikal pelayar dan peranti untuk menghasilkan laporan penggunaan.
+            </p>
+            <p>
+              Kod penjejakan tersuai kami merekodkan jenis interaksi seperti klik WhatsApp, telefon, e-mel atau peta. Nama, nombor telefon yang anda isi, alamat e-mel dan teks pertanyaan dalam borang tidak disertakan dalam peristiwa analitik tersuai ini. Klik butang hubungan tidak dianggap sebagai pengesahan bahawa mesej telah dihantar.
+            </p>
+            <p>
+              Maklumat lanjut: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-white underline">Dasar Privasi Google</a> dan <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-white underline">pilihan keluar Google Analytics</a>.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h2 className="text-white font-bold text-2xl">
+              5. Hubungi Pegawai Privasi Kami
             </h2>
             <p>
               Sekiranya anda mempunyai sebarang pertanyaan mengenai dasar ini atau ingin meminta pemadaman sebarang perbualan WhatsApp lampau, sila hubungi kami di:

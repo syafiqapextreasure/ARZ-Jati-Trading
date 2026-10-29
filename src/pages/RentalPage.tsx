@@ -1,3 +1,4 @@
+import {trackContactClick} from '../lib/analytics';
 import React, { useState } from 'react';
 import {
   Wrench,
@@ -66,6 +67,7 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
     setHandoffOpen(true);
 
     // Open WhatsApp in new tab
+    trackContactClick('whatsapp','/sewa-peralatan');
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
