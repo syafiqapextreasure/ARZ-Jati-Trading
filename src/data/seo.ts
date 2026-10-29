@@ -1,5 +1,6 @@
 import {PROJECTS} from './projects';
 import {COMPANY_INFO} from './company';
+import {RENTAL_FAQS} from './rental';
 
 export const SITE_URL = 'https://arzbina.com';
 export const FAQS = [
@@ -22,7 +23,7 @@ const pageInfo:Record<string,[string,string]>={
  '/perkhidmatan':['Bina Rumah, Ubah Suai & Kemasan Kelantan | ARZ Bina','Terokai perkhidmatan ARZ Bina: pembinaan rumah, ubah suai, kerja cat, jubin, kabinet, kerja tanah dan servis. Bincangkan skop projek anda.'],
  '/projek':['Portfolio Projek Rumah & Kemasan | ARZ Bina Kelantan','Lihat portfolio pembinaan rumah, kolam renang, kerja cat, epoxy, jubin dan gelanggang sukan ARZ Jati Trading.'],
  '/hubungi-kami':['Hubungi ARZ Bina | Wakaf Bharu, Kelantan','Hubungi ARZ Bina di 014-819 6216. Lihat lokasi pejabat Kampung Pasir Pekan, Wakaf Bharu dan hantar pertanyaan projek Kelantan atau Terengganu.'],
- '/sewa-peralatan':['Pertanyaan Sewaan Peralatan Tapak | ARZ Bina','Bincangkan keperluan sewaan peralatan tapak bina bersama ARZ Bina. Semak jenis peralatan, tempoh, lokasi dan ketersediaan melalui WhatsApp.'],
+ '/sewa-peralatan':['Sewa Peralatan Tapak Bina Kelantan | ARZ Bina','Pertanyaan sewaan peralatan tapak bina di Kelantan bersama ARZ Bina, Wakaf Bharu. Semak keperluan, tempoh, lokasi, kadar dan ketersediaan melalui WhatsApp.'],
  '/privasi':['Dasar Privasi | ARZ Bina','Dasar privasi dan komunikasi untuk pertanyaan projek melalui laman web ARZ Bina.'],
 };
 export function getSeo(rawPath:string){
@@ -36,5 +37,9 @@ export function getSeo(rawPath:string){
  const graph:any[]=[business,{'@type':'WebSite','@id':SITE_URL+'/#website',name:'ARZ Bina',alternateName:'ARZ Jati Trading',url:SITE_URL+'/',inLanguage:'ms-MY',publisher:{'@id':SITE_URL+'/#business'}},{'@type':path==='/hubungi-kami'?'ContactPage':path==='/tentang-kami'?'AboutPage':'WebPage','@id':canonical+'#webpage',url:canonical,name:title,description,inLanguage:'ms-MY',isPartOf:{'@id':SITE_URL+'/#website'},about:{'@id':SITE_URL+'/#business'}}];
  if(path!=='/'&&known)graph.push({'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Laman Utama',item:SITE_URL+'/'},...(project?[{'@type':'ListItem',position:2,name:'Projek',item:SITE_URL+'/projek'}]:[]),{'@type':'ListItem',position:project?3:2,name:project?.title||region?.title||title.split('|')[0].trim(),item:canonical}]});
  if(path==='/'||region)graph.push({'@type':'FAQPage',mainEntity:FAQS.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))});
+ if(path==='/sewa-peralatan'){
+  graph.push({'@type':'FAQPage',mainEntity:RENTAL_FAQS.map(f=>({'@type':'Question',name:f.question,acceptedAnswer:{'@type':'Answer',text:f.answer}}))});
+  graph.push({'@type':'Service','@id':canonical+'#service',name:'Pertanyaan Sewaan Peralatan Tapak Bina',serviceType:'Sewaan peralatan tapak bina',url:canonical,provider:{'@id':SITE_URL+'/#business'},areaServed:{'@type':'State',name:'Kelantan'},description});
+ }
  return {path,title,description,canonical,robots:known&&path!=='/privasi'?'index,follow,max-image-preview:large':'noindex,follow',schema:{'@context':'https://schema.org','@graph':graph}};
 }

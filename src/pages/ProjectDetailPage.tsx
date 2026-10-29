@@ -1,3 +1,4 @@
+import {InternalLink} from '../components/InternalLink';
 import React from 'react';
 import { PROJECTS } from '../data/projects';
 import {
@@ -32,12 +33,9 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
           <p className="text-neutral-400 text-lg">
             Rekod projek yang dicari tidak wujud atau telah dikemas kini.
           </p>
-          <button
-            onClick={() => onNavigate('/projek')}
-            className="min-h-[48px] px-8 py-3 rounded-xl bg-white text-neutral-950 font-bold hover:bg-neutral-200 transition-colors"
-          >
+          <InternalLink href="/projek" onNavigate={onNavigate} className="min-h-[48px] px-8 py-3 rounded-xl bg-white text-neutral-950 font-bold hover:bg-neutral-200 transition-colors">
             Kembali ke Senarai Projek
-          </button>
+          </InternalLink>
         </div>
       </div>
     );
@@ -51,13 +49,10 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
         
         {/* Navigation Breadcrumb */}
         <div>
-          <button
-            onClick={() => onNavigate('/projek')}
-            className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-base font-semibold group cursor-pointer"
-          >
+          <InternalLink href="/projek" onNavigate={onNavigate} className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-base font-semibold group cursor-pointer">
             <ArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
             <span>Kembali ke Semua Projek</span>
-          </button>
+          </InternalLink>
         </div>
 
         {/* Project Header */}
@@ -172,12 +167,9 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
                   <span>Bincang Skop Serupa</span>
                 </a>
 
-                <button
-                  onClick={() => onNavigate('/perkhidmatan')}
-                  className="w-full min-h-[48px] px-4 py-2.5 rounded-xl pearl-glass border border-white/20 text-neutral-300 hover:text-white font-medium text-sm transition-colors text-center cursor-pointer"
-                >
+                <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="flex items-center justify-center w-full min-h-[48px] px-4 py-2.5 rounded-xl pearl-glass border border-white/20 text-neutral-300 hover:text-white font-medium text-sm transition-colors text-center cursor-pointer">
                   Semak Semua Perkhidmatan
-                </button>
+                </InternalLink>
               </div>
             </div>
           </div>

@@ -33,3 +33,4 @@ await writeFile(resolve(root,'dist/sitemap.xml'),xml);
 console.log(`Prerendered ${STATIC_ROUTES.length+projectPaths.length} pages; sitemap contains ${INDEXABLE_ROUTES.length} canonical URLs.`);
 
 await import('./check-seo.mjs');
+await import('./check-worker.mjs');

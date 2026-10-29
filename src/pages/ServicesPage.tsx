@@ -1,3 +1,4 @@
+import {InternalLink} from '../components/InternalLink';
 import React, { useState } from 'react';
 import { SERVICES, ServiceItem } from '../data/services';
 import {
@@ -48,13 +49,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               </p>
             </div>
           </div>
-          <button
-            onClick={() => onNavigate('/sewa-peralatan')}
-            className="min-h-[48px] px-6 py-2.5 rounded-xl bg-white text-neutral-950 font-bold text-base hover:bg-neutral-200 transition-colors flex items-center gap-2 shrink-0 cursor-pointer"
-          >
+          <InternalLink href="/sewa-peralatan" onNavigate={onNavigate} className="min-h-[48px] px-6 py-2.5 rounded-xl bg-white text-neutral-950 font-bold text-base hover:bg-neutral-200 transition-colors flex items-center gap-2 shrink-0 cursor-pointer">
             <span>Semak Sewaan Peralatan</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </InternalLink>
         </div>
 
         {/* Interactive Segmented Selector for Services */}
@@ -118,12 +116,9 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                     <MessageCircle className="w-5 h-5 fill-neutral-950" />
                     <span>Dapatkan Sebut Harga WhatsApp</span>
                   </a>
-                  <button
-                    onClick={() => onNavigate('/projek')}
-                    className="min-h-[50px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer text-base"
-                  >
+                  <InternalLink href="/projek" onNavigate={onNavigate} className="min-h-[50px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer text-base">
                     Lihat Contoh Projek Terkait
-                  </button>
+                  </InternalLink>
                 </div>
               </div>
 

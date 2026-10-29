@@ -20,6 +20,13 @@ export const RENTAL_CATALOGUE: EquipmentItem[] = [
   // Ready schema for owner to populate with real inventory when available
 ];
 
+export const RENTAL_FAQS = [
+  {question: 'Bagaimana hendak menyemak sewaan peralatan tapak bina?', answer: 'Nyatakan jenis peralatan, kuantiti, tarikh mula dan tamat, serta lokasi tapak dalam borang pertanyaan. WhatsApp akan dibuka dengan ringkasan untuk anda hantar kepada ARZ Bina. Pasukan kami akan menyemak keperluan dan ketersediaan sebelum mengesahkan sewaan.'},
+  {question: 'Berapakah kadar sewaan dan kos penghantaran?', answer: 'Kadar perlu disemak mengikut jenis peralatan, tempoh sewaan, lokasi dan akses tapak. Minta pecahan sebut harga termasuk penghantaran, pengambilan serta pengendali jika diperlukan. Tiada kadar tetap atau bayaran atas talian dipaparkan di laman ini.'},
+  {question: 'Bolehkah saya bertanya untuk tapak di Kelantan atau Terengganu?', answer: 'ARZ Bina berpangkalan di Wakaf Bharu, Kelantan. Berikan daerah atau pin lokasi tapak anda, termasuk bagi pertanyaan di Terengganu. Liputan penghantaran, jadual dan ketersediaan perlu disahkan oleh pasukan kami mengikut lokasi dan keperluan sebenar.'},
+  {question: 'Adakah menghantar borang bermaksud tempahan sudah disahkan?', answer: 'Belum. Borang ini menyediakan mesej pertanyaan WhatsApp sahaja. Anda perlu menekan Hantar dalam WhatsApp, kemudian mendapatkan pengesahan jenis peralatan, tarikh, kadar dan syarat sewaan daripada pasukan ARZ Bina sebelum membuat persediaan tapak.'},
+];
+
 export interface RentalEnquiryFormState {
   equipment: string;
   quantity: number;

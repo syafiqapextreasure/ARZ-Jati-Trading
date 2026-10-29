@@ -1,3 +1,4 @@
+import {InternalLink} from './InternalLink';
 import React from 'react';
 import { ArzLogo } from './ArzLogo';
 import { COMPANY_INFO } from '../data/company';
@@ -18,13 +19,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenChecklist }) =
           
           {/* Brand & Registration Column (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <button
-              onClick={() => onNavigate('/')}
-              className="text-left focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 -ml-1 cursor-pointer"
-              aria-label="Kembali ke Laman Utama"
-            >
+            <InternalLink href="/" onNavigate={onNavigate} className="text-left focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 -ml-1 cursor-pointer"
+              aria-label="Kembali ke Laman Utama">
               <ArzLogo size="md" light={true} />
-            </button>
+            </InternalLink>
             <p className="text-neutral-400 text-lg leading-relaxed max-w-md">
               Membina Ruang Untuk Kehidupan Lebih Baik. Khidmat kontraktor pembinaan rumah, pengubahsuaian, aplikasi cat bertauliah, mozek, dan kerja sivil di Kelantan.
             </p>
@@ -41,54 +39,36 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenChecklist }) =
             <h3 className="text-white text-lg font-bold tracking-wider uppercase">
               Pautan Pantas
             </h3>
-            <ul className="space-y-3 text-lg"><li><a href="/bina-rumah-kelantan">Bina Rumah Kelantan</a></li><li><a href="/bina-rumah-terengganu">Bina Rumah Terengganu</a></li><li><button onClick={() => onNavigate('/hubungi-kami')} className="hover:text-white">Hubungi Kami</button></li>
+            <ul className="space-y-3 text-lg"><li><a href="/bina-rumah-kelantan">Bina Rumah Kelantan</a></li><li><a href="/bina-rumah-terengganu">Bina Rumah Terengganu</a></li><li><InternalLink href="/hubungi-kami" onNavigate={onNavigate} className="hover:text-white">Hubungi Kami</InternalLink></li>
               <li>
-                <button
-                  onClick={() => onNavigate('/')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Laman Utama
-                </button>
+                </InternalLink>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/tentang-kami')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/tentang-kami" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Tentang Kami
-                </button>
+                </InternalLink>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/perkhidmatan')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Perkhidmatan Kami
-                </button>
+                </InternalLink>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/sewa-peralatan')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/sewa-peralatan" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Sewa Peralatan Tapak
-                </button>
+                </InternalLink>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/projek')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/projek" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Portfolio Projek
-                </button>
+                </InternalLink>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/privasi')}
-                  className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block"
-                >
+                <InternalLink href="/privasi" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer text-neutral-400 hover:translate-x-1 duration-150 inline-block">
                   Dasar Privasi & Komunikasi
-                </button>
+                </InternalLink>
               </li>
             </ul>
           </div>
@@ -140,12 +120,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenChecklist }) =
             © {currentYear} {COMPANY_INFO.name} ({COMPANY_INFO.registrationNo.split(' ')[1]?.replace(/[()]/g, '') || 'KT0244929-D'}). Hak Cipta Terpelihara.
           </div>
           <div className="flex items-center gap-6">
-            <button
-              onClick={() => onNavigate('/privasi')}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
+            <InternalLink href="/privasi" onNavigate={onNavigate} className="hover:text-white transition-colors cursor-pointer">
               Dasar Privasi
-            </button>
+            </InternalLink>
             <span>·</span>
             <span className="text-neutral-400">Wakaf Bharu, Kelantan</span>
           </div>

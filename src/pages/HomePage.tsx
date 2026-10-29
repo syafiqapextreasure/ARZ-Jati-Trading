@@ -1,3 +1,4 @@
+import {InternalLink} from '../components/InternalLink';
 import {trackContactClick} from '../lib/analytics';
 import {SearchContent} from '../components/SearchContent';
 import { HomeHero } from '../components/HomeHero';
@@ -135,14 +136,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                     Dari asas kepada kediaman idaman.
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/perkhidmatan')}
-                  className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
-                  aria-label="Lihat perkhidmatan Bina Rumah"
-                >
+                <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
+                  aria-label="Lihat perkhidmatan Bina Rumah">
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </InternalLink>
               </div>
             </div>
 
@@ -165,14 +162,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                     Ruang baharu, kehidupan lebih baik.
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/perkhidmatan')}
-                  className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
-                  aria-label="Lihat perkhidmatan Ubah Suai"
-                >
+                <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
+                  aria-label="Lihat perkhidmatan Ubah Suai">
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </InternalLink>
               </div>
             </div>
 
@@ -195,14 +188,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                     Sentuhan akhir yang menyerlah.
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/perkhidmatan')}
-                  className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
-                  aria-label="Lihat perkhidmatan Cat & Kemasan"
-                >
+                <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-neutral-300 hover:text-neutral-950 flex items-center justify-center border border-white/20 transition-all shrink-0 cursor-pointer"
+                  aria-label="Lihat perkhidmatan Cat & Kemasan">
                   <ArrowRight className="w-5 h-5" />
-                </button>
+                </InternalLink>
               </div>
             </div>
 
@@ -210,13 +199,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
 
           {/* Quick link to see all 7 services */}
           <div className="mt-12 text-center">
-            <button
-              onClick={() => onNavigate('/perkhidmatan')}
-              className="inline-flex items-center gap-2 text-neutral-300 hover:text-white text-lg font-medium underline underline-offset-8 transition-colors cursor-pointer"
-            >
+            <InternalLink href="/perkhidmatan" onNavigate={onNavigate} className="inline-flex items-center gap-2 text-neutral-300 hover:text-white text-lg font-medium underline underline-offset-8 transition-colors cursor-pointer">
               <span>Terokai semua 7 bidang kepakaran kami</span>
               <ChevronRight className="w-5 h-5" />
-            </button>
+            </InternalLink>
           </div>
 
         </div>
@@ -242,13 +228,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
               <p className="text-neutral-300 text-lg sm:text-[20px]">
                 Setiap ruang ada cerita. Inilah sebahagiannya.
               </p>
-              <button
-                onClick={() => onNavigate('/projek')}
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl pearl-glass border border-white/20 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer text-base"
-              >
+              <InternalLink href="/projek" onNavigate={onNavigate} className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl pearl-glass border border-white/20 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer text-base">
                 <span>Lihat Semua</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </InternalLink>
             </div>
           </div>
 
@@ -327,12 +310,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
           </div>
 
           <div className="mt-8 text-center sm:hidden">
-            <button
-              onClick={() => onNavigate('/projek')}
-              className="w-full min-h-[48px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-medium"
-            >
+            <InternalLink href="/projek" onNavigate={onNavigate} className="inline-flex items-center justify-center w-full min-h-[48px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-medium">
               Lihat Semua Portfolio Projek
-            </button>
+            </InternalLink>
           </div>
 
         </div>
@@ -384,13 +364,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                   <ArrowRight className="w-5 h-5" />
                 </a>
 
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/sewa-peralatan')}
-                  className="min-h-[50px] px-6 py-3.5 rounded-xl pearl-glass border border-white/25 text-white font-semibold text-lg hover:bg-white/15 transition-colors shrink-0 w-full sm:w-auto cursor-pointer"
-                >
+                <InternalLink href="/sewa-peralatan" onNavigate={onNavigate} className="min-h-[50px] px-6 py-3.5 rounded-xl pearl-glass border border-white/25 text-white font-semibold text-lg hover:bg-white/15 transition-colors shrink-0 w-full sm:w-auto cursor-pointer">
                   Borang Pertanyaan
-                </button>
+                </InternalLink>
               </div>
             </div>
 
@@ -419,13 +395,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
                 {COMPANY_INFO.narrative.origin} Kami menyatukan kepakaran pertukangan tempatan bersama pematuhan piawaian pengilang cat terkemuka.
               </p>
               <div>
-                <button
-                  onClick={() => onNavigate('/tentang-kami')}
-                  className="min-h-[48px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors inline-flex items-center gap-2 cursor-pointer"
-                >
+                <InternalLink href="/tentang-kami" onNavigate={onNavigate} className="min-h-[48px] px-6 py-3 rounded-xl pearl-glass border border-white/20 text-white font-semibold hover:bg-white/10 transition-colors inline-flex items-center gap-2 cursor-pointer">
                   <span>Ketahui Latar Belakang & Pasukan</span>
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </InternalLink>
               </div>
             </div>
 

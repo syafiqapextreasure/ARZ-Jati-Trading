@@ -13,7 +13,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import {
-  RENTAL_CATALOGUE,
+  RENTAL_FAQS,
   RentalEnquiryFormState,
   INITIAL_RENTAL_ENQUIRY,
   buildRentalWhatsAppUrl,
@@ -96,16 +96,34 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
         
         {/* Header Hero */}
         <section className="space-y-6 max-w-4xl">
+          <nav aria-label="Jejak halaman" className="text-base text-neutral-300">
+            <a href="/" className="underline underline-offset-4">Laman Utama</a>
+            <span aria-hidden="true"> / </span><span>Sewa Peralatan</span>
+          </nav>
           <div className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-semibold tracking-widest uppercase text-neutral-400">
             <span className="w-6 h-[2px] bg-neutral-400 inline-block" />
             <span>SEWAAN PERALATAN</span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.1] text-balance">
-            Pertanyaan Sewaan Peralatan Tapak Bina
+            Sewaan Peralatan Tapak Bina di Kelantan
           </h1>
           <p className="text-xl sm:text-[22px] text-neutral-300 leading-relaxed max-w-3xl">
-            ARZ JATI TRADING menyediakan perkhidmatan sewaan peralatan untuk menyokong operasi projek sivil dan binaan di tapak anda.
+            Bincangkan keperluan sewaan peralatan projek sivil dan pembinaan bersama ARZ Bina di Wakaf Bharu, Kelantan. Kongsi jenis kerja, tempoh sewaan dan lokasi tapak untuk semakan peralatan yang sesuai serta ketersediaan.
           </p>
+        </section>
+
+        <section className="space-y-6" aria-labelledby="rental-process">
+          <h2 id="rental-process" className="text-3xl text-white">Cara Mendapatkan Sebut Harga Sewaan</h2>
+          <ol className="grid md:grid-cols-3 gap-6 list-none">
+            {[
+              ['1. Terangkan kerja tapak', 'Nyatakan jenis kerja, peralatan dan kuantiti yang diperlukan. Sertakan kapasiti atau spesifikasi jika diketahui supaya keperluan boleh disemak dengan tepat.'],
+              ['2. Kongsi tarikh dan lokasi', 'Berikan tarikh mula, jangkaan tempoh dan daerah atau pin lokasi. Maklumkan keadaan akses masuk, ruang penghantaran dan keperluan pengendali jika ada.'],
+              ['3. Dapatkan pengesahan', 'Semak ketersediaan, kadar, penghantaran dan pengambilan bersama pasukan kami. Pastikan butiran dan syarat sewaan dipersetujui sebelum menjadualkan kerja tapak.'],
+            ].map(([title, text]) => <li key={title} className="pearl-glass border border-white/20 rounded-2xl p-6">
+              <h3 className="text-xl text-white mb-3">{title}</h3><p className="text-lg text-neutral-300 leading-relaxed">{text}</p>
+            </li>)}
+          </ol>
+          <p className="text-lg text-neutral-300 leading-relaxed">Untuk semakan awal, <a className="underline underline-offset-4" href={`tel:${COMPANY_INFO.phoneClean}`}>hubungi 014-819 6216</a> atau gunakan borang di bawah. Bagi pertanyaan tapak di Terengganu, liputan dan penghantaran disemak mengikut lokasi.</p>
         </section>
 
         {/* Truthful Inventory Disclaimer (Per instructions: No inventory is supplied, do not invent fictional machines/prices) */}
@@ -137,7 +155,7 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
         </div>
 
         {/* Working Enquiry Form */}
-        <section className="p-8 sm:p-12 rounded-3xl pearl-glass border border-white/20 shadow-2xl space-y-8">
+        <section id="borang-sewaan" className="p-8 sm:p-12 rounded-3xl pearl-glass border border-white/20 shadow-2xl space-y-8">
           <div className="border-b border-white/10 pb-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-white">
               Borang Pertanyaan Sewaan
@@ -159,7 +177,7 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
                 type="text"
                 value={form.equipment}
                 onChange={(e) => setForm({ ...form, equipment: e.target.value })}
-                placeholder="cth. Backhoe loader, jentera perata, compactor roller, generator tapak..."
+                placeholder="Nyatakan nama peralatan atau terangkan kerja tapak anda"
                 className={`w-full min-h-[48px] px-4 py-3 rounded-xl bg-black/60 border text-white placeholder-neutral-500 focus-visible:ring-2 focus-visible:ring-white transition-all text-base ${
                   errors.equipment ? 'border-red-400' : 'border-white/20'
                 }`}
@@ -306,6 +324,15 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
             </div>
 
           </form>
+        </section>
+
+        <section className="space-y-4" aria-labelledby="rental-faq">
+          <h2 id="rental-faq" className="text-3xl text-white">Soalan Lazim Sewaan Peralatan</h2>
+          {RENTAL_FAQS.map(faq => <details key={faq.question} className="border-b border-white/20 py-5">
+            <summary className="text-xl font-semibold cursor-pointer text-white">{faq.question}</summary>
+            <p className="text-lg text-neutral-300 leading-relaxed mt-4">{faq.answer}</p>
+          </details>)}
+          <p className="text-lg text-neutral-300 leading-relaxed">Merancang kerja pembinaan juga? Lihat <a href="/perkhidmatan" className="underline underline-offset-4">perkhidmatan ARZ Bina</a> atau <a href="/hubungi-kami" className="underline underline-offset-4">lokasi pejabat dan maklumat hubungan</a>.</p>
         </section>
 
       </div>
