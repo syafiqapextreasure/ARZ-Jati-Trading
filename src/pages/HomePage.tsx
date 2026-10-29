@@ -65,7 +65,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenLightbox }
       .join('\n');
 
     const waUrl = `https://wa.me/60148196216?text=${encodeURIComponent(text)}`;
-    trackContactClick('whatsapp','/');
+    trackContactClick('whatsapp','/','form');
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 

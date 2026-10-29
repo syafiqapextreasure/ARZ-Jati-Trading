@@ -4,7 +4,7 @@ import {stripTypeScriptTypes} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {fileURLToPath} from 'node:url';
 const entry=fileURLToPath(new URL('../src/lib/analytics.ts',import.meta.url));
-async function fixture(id,hostname='arzbina.com'){
+export async function fixture(id,hostname='arzbina.com'){
  const source=(await readFile(entry,'utf8')).replaceAll('import.meta.env.VITE_GA_MEASUREMENT_ID',JSON.stringify(id)).replaceAll('import.meta.env.VITE_GA_DEBUG','"false"');
  const code=stripTypeScriptTypes(source.replace("import {GA_MEASUREMENT_ID} from '../data/analytics-config';","const GA_MEASUREMENT_ID='';"),{mode:'strip'}).replaceAll('export function','function')+'\nmodule.exports={isAnalyticsConfigured,trackPageView,trackContactClick,contactMethod};';
  const scripts=[];
@@ -31,13 +31,17 @@ assert.equal(queue.find(args=>args[0]==='config')[2].send_page_view,false,'Autom
 const views=queue.filter(args=>args[1]==='page_view');
 assert.equal(views[0][2].page_referrer,'https://www.google.com/search');
 assert.equal(views[1][2].page_referrer,'https://arzbina.com/');
-const contact=queue.find(args=>args[1]==='contact_click');
+const contact=queue.find(args=>args[1]==='whatsapp_click');
 assert.equal(contact[2].contact_method,'whatsapp');
+assert.equal(contact[2].page_location,'https://arzbina.com/perkhidmatan');
+assert.equal(contact[2].page_title,'Services');
+assert.equal(contact[2].contact_placement,'content');
 assert.ok(!JSON.stringify(queue).includes('do-not-send-this-query'));
 assert.equal(enabled.api.contactMethod('https://wa.me/60148196216?text=private-message'),'whatsapp');
 assert.equal(enabled.api.contactMethod('tel:+60148196216'),'phone');
 assert.equal(enabled.api.contactMethod('mailto:example@example.com'),'email');
 assert.equal(enabled.api.contactMethod('https://maps.app.goo.gl/example'),'map');
 assert.equal(enabled.api.contactMethod('https://example.com'),null);
-assert.deepEqual(Object.keys(contact[2]).sort(),['contact_method','page_path','send_to']);
+assert.deepEqual(Object.keys(contact[2]).sort(),['contact_method','contact_placement','page_location','page_path','page_title','send_to']);
+assert.equal(queue.filter(args=>args[0]==='set').length,2,'Current context updated for each virtual page');
 console.log('Analytics checks passed: missing ID, preview exclusion, single tag, pageview deduplication, referrers and safe contact events. No Google requests made.');

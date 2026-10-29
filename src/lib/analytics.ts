@@ -5,11 +5,13 @@ type AnalyticsWindow = Window & {
   gtag?: (...args: unknown[]) => void;
 };
 export type ContactMethod = 'whatsapp'|'phone'|'email'|'map';
+export type ContactPlacement = 'header'|'floating'|'footer'|'content'|'form';
 const measurementId = (import.meta.env.VITE_GA_MEASUREMENT_ID || GA_MEASUREMENT_ID).trim();
 const debug = import.meta.env.VITE_GA_DEBUG === 'true';
 let initialized = false;
 let lastLocation = '';
 let previousLocation = '';
+let currentPage: {page_title:string;page_location:string;page_path:string;page_referrer:string}|null = null;
 
 export function isAnalyticsConfigured() {
   return /^G-[A-Z0-9]{6,20}$/.test(measurementId);
@@ -50,21 +52,27 @@ export function trackPageView(path:string,title:string) {
   const browser=window as AnalyticsWindow;
   const location=browser.location.origin+path;
   if (lastLocation===location) return;
+  currentPage={page_title:title,page_location:location,page_path:path,page_referrer:previousLocation};
+  // Keep subsequent contact/engagement events associated with this virtual page.
+  browser.gtag!('set',currentPage);
   browser.gtag!('event','page_view',{
     send_to:measurementId,
-    page_title:title,
-    page_location:location,
-    page_referrer:previousLocation,
+    ...currentPage,
   });
   previousLocation=location;
   lastLocation=location;
 }
 
 // An enquiry-button click indicates intent; it does not confirm a sent message.
-export function trackContactClick(method:ContactMethod,path:string) {
+export function trackContactClick(method:ContactMethod,path:string,placement:ContactPlacement='content') {
   if (!['whatsapp','phone','email','map'].includes(method) || !initialize()) return;
-  (window as AnalyticsWindow).gtag!('event','contact_click',{
-    send_to:measurementId,contact_method:method,page_path:path,
+  (window as AnalyticsWindow).gtag!('event',method==='whatsapp'?'whatsapp_click':'contact_click',{
+    send_to:measurementId,
+    contact_method:method,
+    contact_placement:placement,
+    page_path:path,
+    page_location:window.location.origin+path,
+    page_title:currentPage?.page_path===path?currentPage.page_title:document.title,
   });
 }
 

@@ -10,7 +10,8 @@
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
     "check:seo": "node scripts/check-seo.mjs",
-    "check:analytics": "node scripts/check-analytics.mjs"
+    "check:analytics": "node scripts/check-analytics.mjs",
+    "check:analytics-routes": "node scripts/check-analytics-routes.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",

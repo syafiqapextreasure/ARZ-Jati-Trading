@@ -20,22 +20,25 @@ Verify after the Measurement ID is installed
 1. Open https://arzbina.com/ in a regular browser with analytics blockers disabled for your test.
 2. In Google Analytics open Reports > Realtime (or Realtime overview).
 3. Visit the homepage, Perkhidmatan and Projek. Confirm page_view events and the corresponding page titles/paths appear. Do not expect historical visits from before activation.
-4. Click a WhatsApp, phone, email or map link to test contact_click. You can close the destination without sending a message. A contact_click records intent, not a confirmed enquiry.
+4. Click a WhatsApp, phone, email or map link to test whatsapp_click (or contact_click for phone/email/map). You can close the destination without sending a message. A contact-button event records intent, not a confirmed enquiry.
 5. Standard reports can take 24–48 hours to populate. Realtime is the quickest initial check; blockers, privacy controls and network filtering can prevent individual test visits from appearing.
 6. If using DebugView, set VITE_GA_DEBUG=true temporarily and rebuild; turn it off and rebuild after testing. This also permits testing on local/preview hosts, which are otherwise excluded.
 
 Events and privacy
 - page_view: page title, known page location, previous page/referrer. Query strings and fragments are excluded from custom page/referrer values.
-- contact_click: contact_method (whatsapp/phone/email/map) and the known page path. Full outgoing URLs, WhatsApp message drafts, form names, entered phone numbers, email addresses and notes are not included by the custom tracking code.
+- whatsapp_click: dedicated WhatsApp click event, with contact_method=whatsapp, contact_placement and the current page title/path.
+- contact_click: phone, email and map interactions, with the same safe page context. Full outgoing URLs, WhatsApp message drafts, form names, entered phone numbers, email addresses and notes are not included by the custom tracking code.
 - Google's tag may use analytics cookies and collect technical browser/device information. Google Signals and ad-personalization signals are disabled in this integration. The privacy page now describes analytics.
 - Collection is disabled until a valid Measurement ID is configured. Normal tracking is limited to arzbina.com and www.arzbina.com.
 
 Optional reporting setup
 - Add contact_method as an event-scoped custom dimension under Admin > Custom definitions to compare contact types in reports.
-- Mark contact_click as a key event only if you want enquiry-button clicks counted as a business outcome; it is not a verified sale or submitted message.
+- Mark whatsapp_click as a key event only if you want enquiry-button clicks counted as a business outcome; it is not a verified sale or submitted message.
 - Link Search Console through Admin > Product links > Search Console links using your verified arzbina.com property, if both products are available in your account.
 
 Official references
 https://support.google.com/analytics/answer/9304153
 https://developers.google.com/analytics/devguides/collection/ga4/views
 https://developers.google.com/analytics/devguides/collection/ga4/single-page-applications
+
+30 October 2026 verification update: the three contact_click events in the supplied screenshot confirm previous contact tracking. WhatsApp now has its own whatsapp_click event name for new clicks; historical events retain their original names. All 23 current public routes passed isolated pageview coverage tests for direct loads and SPA navigation, with current titles/locations and previous-page referrers. These local tests do not certify processing inside your Google account. Realtime cards can update at different times; allow a few minutes and use page-path reporting when checking page coverage. Keep Enhanced measurement off to prevent duplicate history-based events.

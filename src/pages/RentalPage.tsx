@@ -67,7 +67,7 @@ export const RentalPage: React.FC<RentalPageProps> = ({ onNavigate }) => {
     setHandoffOpen(true);
 
     // Open WhatsApp in new tab
-    trackContactClick('whatsapp','/sewa-peralatan');
+    trackContactClick('whatsapp','/sewa-peralatan','form');
     window.open(waUrl, '_blank', 'noopener,noreferrer');
   };
 
